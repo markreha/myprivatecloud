@@ -1,8 +1,0 @@
-com.ontheedgesc.kubernetesapi
-com.ontheedgesc.portal
-com.ontheedgesc.portal.business
-com.ontheedgesc.portal.controller
-com.ontheedgesc.portal.data.entity
-com.ontheedgesc.portal.data.repository
-com.ontheedgesc.portal.model
-com.ontheedgesc.portal.util
