@@ -70,13 +70,13 @@ This repository contains the design, code, and documentation for the My Private 
 - Raspberry Pi 4 with 4GB of RAM and 32Gb SD Card
 - D-Link DGS-108 8 Port Gigibit Network Switch
 - Power Strip
-- 500Gb WD USB 3 SSD Drive
+- 500GB WD USB 3 SSD Drive
 
 ## Software
 - Raspberry Pi:
-    - 32 bit Raspbian OS, Docker, Kubernetes
-- Port Application:
-    - Spring Boot, Java 15, on MySQL 8.0 database
+    - Raspbian OS (32-bit), Docker, Kubernetes
+- Portal Application:
+    - Spring Boot, Java 15, and MySQL 8.0 database
 
 ## System Design
 <table>
