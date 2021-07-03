@@ -26,7 +26,7 @@ This repository contains the design, code, and documentation for the My Private 
     - New Stacks can be easily added to the Catalog.
     - You can add a new Stack with a database entry and this can be done in less than an hour.
 ## Portal Screenshots
-- [Login](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Login.png)
+- [Login](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Login.png | 800)
 - [Catalog - Web Servers](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Catalog1.png)
 - [Catalog - Web App Servers](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Catalog2.png)
 - [Catalog - Databases](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Catalog3.png)
