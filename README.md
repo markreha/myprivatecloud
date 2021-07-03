@@ -5,8 +5,8 @@ This repository contains the design, code, and documentation for the My Private 
 
 <table>
     <tr>
-        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/design/Logical%20Architecture.png" alt="My Private Cloud Logical Architecture"/></td>
-         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/design/Physical%20Architecture.png" alt="My Private Cloud Physical Architecture"/></td>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/design/Logical%20Architecture.png"/></td>
+         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/design/Physical%20Architecture.png"/></td>
     </tr>
 </table>
 
@@ -29,7 +29,7 @@ This repository contains the design, code, and documentation for the My Private 
 ## Portal Screenshots
 <table>
     <tr>
-        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Login.png"/></td>
+        <td>Test<br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Login.png"/></td>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Admin1.png"/></td>
     </tr>
     <tr>
@@ -56,7 +56,7 @@ This repository contains the design, code, and documentation for the My Private 
 - Raspberry Pi: 32 bit Raspbian OS, Docker, Kubernetes
 - Port Application: Spring Boot, Java 15, on MySQL 8.0 database
 
-## Design
+## System Design
 <table>
     <tr>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/design/Logical%20Architecture.png"/></td>
@@ -68,7 +68,7 @@ This repository contains the design, code, and documentation for the My Private 
     </tr>
 </table>
 
-## Management
+## Cloud Management and Monitoring
 <table>
     <tr>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Lens1.png"/></td>
