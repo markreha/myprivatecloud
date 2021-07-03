@@ -29,7 +29,7 @@ This repository contains the design, code, and documentation for the My Private 
 ## Portal Screenshots
 <table>
     <tr>
-        <td align="center">Login<br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Login.png"/></td>
+        <td align="center"><b>Login</b><br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Login.png"/></td>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Admin1.png"/></td>
     </tr>
     <tr>
