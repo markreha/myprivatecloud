@@ -28,13 +28,22 @@ This repository contains the design, code, and documentation for the My Private 
     - RealVNC and SSH into Master Node.
 - Low cost:
     - A single Master Node and three Worker Node Cluster with Storage will cost less than $500.
-- Cluster Hardware is easily extendable:
+- Cloud Compute Resources are easily extendable:
     - You can add a new Worker Node in less then an hour and that will only cost about $75.
 - Portal Application is easily extendable:
     - New Stacks can be easily added to the Catalog.
     - You can add a new Stack with a database entry and this can be done in less than an hour.
     - Can leverage custom Docker Images pushed to Docker Hub.
     - Communication with Kubernetes via a custom Java Cluster API that leverages the Fabric8 library.
+- Portal Application is easy to use:
+    - Go to the Catalog
+    - Pick your Stack or Database
+    - Give your Application a Name
+    - Select between a Tiny, Medium, and Large Container Size (amount of CPU and RAM)
+    - Click the Provision button
+    - Go the My Apps tab
+    - Click the Deploy button to deploy a compressed version of your application
+    - Click the Go button to access your application
 
 ## Portal Screenshots
 <table>
