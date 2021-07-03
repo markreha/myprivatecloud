@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: network-pv-volume 
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 500Gi
+  accessModes:
+    - ReadWriteMany
+  flexVolume:
+    driver: "fstab/cifs"
+    fsType: "cifs" 
+    secretRef: 
+      name: "cifs-secret" 
+    options: 
+      networkPath: //10.244.100.10/share
+      mountOptions: "dir_mode=0777,file_mode=0755,noperm"
