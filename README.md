@@ -41,7 +41,7 @@ This repository contains the design, code, and documentation for the My Private 
     </tr>
     <tr>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/MyApps1.png"/></td>
-        <td>></td>
+        <td></td>
     </tr>
 </table>
 ## Hardware
@@ -53,14 +53,27 @@ This repository contains the design, code, and documentation for the My Private 
 - Raspberry Pi: 32 bit Raspbian OS, Docker, Kubernetes
 - Port Application: Spring Boot, Java 15, on MySQL 8.0 database
 ## Design
-- [Logical Architecture](https://github.com/markreha/myprivatecloud/blob/main/documentation/design/Logical%20Architecture.png)
-- [Physical Architecture](https://github.com/markreha/myprivatecloud/blob/main/documentation/design/Physical%20Architecture.png)
-- [Portal Database](https://github.com/markreha/myprivatecloud/blob/main/documentation/design/ER%20Database%20Diagram.png)
+<table>
+    <tr>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/design/Logical%20Architecture.png"/></td>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/design/Physical%20Architecture.png"/></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/design/ER%20Database%20Diagram.png"/></td>
+        <td></td>
+    </tr>
+</table>
 ## Management
-- [Lens - Cluster](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Lens1.png)
-- [Lens - Nodes](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Lens2.png)
-- [Lens - Pods](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Lens3.png)
-- [Portal - Users](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Admin1.png)
+<table>
+    <tr>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Lens1.png"/></td>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Lens2.png"/></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Lens3.png"/></td>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Admin1.png"/></td>
+    </tr>
+</table>
 
 
 
