@@ -22,7 +22,7 @@ This repository contains the design, code, and documentation for the My Private 
     - Web Stacks: PHP (7.1 and 7.4), PHP 7.4 Laravel, Java Tomcat (8.5 and 9.0)
     - Databases: MySQL, PostgreSQL, MongoDB
     - Tools: Visual Studio Code
-    - .NET.ASP Core and NodeJS in works........
+    - ASP.NET Core and NodeJS in works........
 - Cloud Management:
     - Web based Portal Application
     - Desktop based Lens Application
