@@ -25,6 +25,7 @@ This repository contains the design, code, and documentation for the My Private 
 - Portal Application is easily extendable:
     - New Stacks can be easily added to the Catalog.
     - You can add a new Stack with a database entry and this can be done in less than an hour.
+
 ## Portal Screenshots
 <table>
     <tr>
@@ -44,14 +45,17 @@ This repository contains the design, code, and documentation for the My Private 
         <td></td>
     </tr>
 </table>
+
 ## Hardware
 - Raspberry Pi 4 with 4GB of RAM with 32Gb SD Card
 - D-Link DGS-108 8 Port Gigibit Network Switch
 - Power Switch
 - 500Gb WD USB3 SSD Drive
+
 ## Software
 - Raspberry Pi: 32 bit Raspbian OS, Docker, Kubernetes
 - Port Application: Spring Boot, Java 15, on MySQL 8.0 database
+
 ## Design
 <table>
     <tr>
@@ -63,6 +67,7 @@ This repository contains the design, code, and documentation for the My Private 
         <td></td>
     </tr>
 </table>
+
 ## Management
 <table>
     <tr>
