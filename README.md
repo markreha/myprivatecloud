@@ -1,5 +1,5 @@
 <p align="center">
-    <h1>My Private Cloud Reference Design</h1>
+    <h1 align="center">My Private Cloud Reference Design</h1>
     <h3><i>Build a Private Cloud for less then $500 that will fit in a Shoe Box</i></h3>
 </p>
 
