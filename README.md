@@ -17,20 +17,24 @@ This repository contains the design, code, and documentation for the My Private 
 
 ## Features
 - Fully functioning Private Cloud:
-    - Capable of running a number of Web Servers, common Web Stacks, Databases, and Tools.
-    - Web Servers: Nginx and Apache
-    - Web Stacks: PHP, PHP Laravel, Java Tomcat
-    - Databases: MySQL, PostgreSQL, MongoDB
-    - Tools: VS Code
-- Managed via a web based Portal Application and Lens.
+    - Capable of running any number of Web Servers, common Web Stacks, Databases, and Tools. Examples include:
+    - Web Servers: Nginx and Apache.
+    - Web Stacks: PHP, PHP Laravel, Java Tomcat.
+    - Databases: MySQL, PostgreSQL, MongoDB.
+    - Tools: VS Code.
+- Cloud Management:
+    - Web based Portal Application.
+    - Desktop application Lens.
+    - RealVNC and SSH into Master Node.
 - Low cost:
-    - A 3 Node Cluster with Storage was less than $500.
+    - A single Master Node and three Worker Node Cluster with Storage will cost less than $500.
 - Cluster Hardware is easily extendable:
-    - You can add a new Node in less then an hour and it only cost about $75.
+    - You can add a new Worker Node in less then an hour and that will only cost about $75.
 - Portal Application is easily extendable:
     - New Stacks can be easily added to the Catalog.
     - You can add a new Stack with a database entry and this can be done in less than an hour.
     - Can leverage custom Docker Images pushed to Docker Hub.
+    - Communication with Kubernetes via a custom Java Cluster API that leverages the Fabric8 library.
 
 ## Portal Screenshots
 <table>
@@ -53,14 +57,16 @@ This repository contains the design, code, and documentation for the My Private 
 </table>
 
 ## Hardware
-- Raspberry Pi 4 with 4GB of RAM with 32Gb SD Card
+- Raspberry Pi 4 with 4GB of RAM and 32Gb SD Card
 - D-Link DGS-108 8 Port Gigibit Network Switch
-- Power Switch
-- 500Gb WD USB3 SSD Drive
+- Power Strip
+- 500Gb WD USB 3 SSD Drive
 
 ## Software
-- Raspberry Pi: 32 bit Raspbian OS, Docker, Kubernetes
-- Port Application: Spring Boot, Java 15, on MySQL 8.0 database
+- Raspberry Pi:
+    - 32 bit Raspbian OS, Docker, Kubernetes
+- Port Application:
+    - Spring Boot, Java 15, on MySQL 8.0 database
 
 ## System Design
 <table>
