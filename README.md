@@ -1,5 +1,5 @@
 <h1 align="center">My Private Cloud Reference Design</h1>
-<h3 align="center"><i>Build a Private Cloud for less then $500 that will fit in a Shoe Box</i></h3>
+<h3 align="center"><i> How to build a Private Cloud for less then $500 that will fit in a Shoe Box</i></h3>
 
 Can we design and build a fully functioning Private Cloud Platform using a cluster of Raspberry PI’s using current Cloud Technologies?
 <br/>
