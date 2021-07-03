@@ -31,14 +31,19 @@ This repository contains the design, code, and documentation for the My Private 
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Login.png"/></td>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Admin1.png"/></td>
     </tr>
+    <tr>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Catalog1.png"/></td>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Catalog2.png"/></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Catalog3.png"/></td>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Catalog4.png"/></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/MyApps1.png"/></td>
+        <td>></td>
+    </tr>
 </table>
-- [Login](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Login.png)
-- [Catalog - Web Servers](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Catalog1.png)
-- [Catalog - Web App Servers](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Catalog2.png)
-- [Catalog - Databases](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Catalog3.png)
-- [Catalog - Tools](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Catalog4.png)
-- [My Apps](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/MyApps1.png)
-- [Admin](https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Admin1.png)
 ## Hardware
 - Raspberry Pi 4 with 4GB of RAM with 32Gb SD Card
 - D-Link DGS-108 8 Port Gigibit Network Switch
