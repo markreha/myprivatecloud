@@ -24,8 +24,8 @@ This repository contains the design, code, and documentation for the My Private 
     - Tools: Visual Studio Code
 - Cloud Management:
     - Web based Portal Application
-    - Desktop application Lens
-    - RealVNC and SSH into Master Node
+    - Desktop based Lens Application
+    - RealVNC and SSH for accessing the Master Node
 - Low cost:
     - A single Master Node and three Worker Node Cluster with Storage will cost less than $500
 - Cloud Compute Resources are easily extendable:
@@ -76,7 +76,7 @@ This repository contains the design, code, and documentation for the My Private 
 - Raspberry Pi:
     - Raspbian OS (32-bit), Docker, Kubernetes
 - Portal Application:
-    - Spring Boot, Java 15, and MySQL 8.0 database
+    - Spring Boot, Thymeleaf, Bootstrap, Java 15, and MySQL 8.0 database
 
 ## System Design
 <table>
