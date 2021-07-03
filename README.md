@@ -64,7 +64,7 @@ This repository contains the design, code, and documentation for the My Private 
     </tr>
     <tr>
         <td align="center"><b>Portal Database</b><br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/design/ER%20Database%20Diagram.png"/></td>
-        <td align="center"><b>Login</b><br/></td>
+        <td align="center"></td>
     </tr>
 </table>
 
