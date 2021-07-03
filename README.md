@@ -34,7 +34,7 @@ This repository contains the design, code, and documentation for the My Private 
 - Portal Application is easily extendable:
     - New Stacks can be easily added to the Catalog
     - You can add a new Stack with a database entry and this can be done in less than an hour
-    - Can leverage custom Docker Images pushed to Docker Hub
+    - You can leverage your own custom Docker Images that have been pushed to Docker Hub
     - Communication with Kubernetes via a custom Java Cluster API that leverages the Fabric8 library
 - Portal Application is easy to use:
     - Go to the Catalog
