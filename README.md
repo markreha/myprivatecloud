@@ -18,32 +18,33 @@ This repository contains the design, code, and documentation for the My Private 
 ## Features
 - Fully functioning Private Cloud:
     - Capable of running any number of Web Servers, common Web Stacks, Databases, and Tools. Examples include:
-    - Web Servers: Nginx and Apache.
-    - Web Stacks: PHP, PHP Laravel, Java Tomcat.
-    - Databases: MySQL, PostgreSQL, MongoDB.
-    - Tools: VS Code.
+    - Web Servers: Nginx and Apache
+    - Web Stacks: PHP, PHP Laravel, Java Tomcat
+    - Databases: MySQL, PostgreSQL, MongoDB
+    - Tools: Visual Studio Code
 - Cloud Management:
-    - Web based Portal Application.
-    - Desktop application Lens.
-    - RealVNC and SSH into Master Node.
+    - Web based Portal Application
+    - Desktop application Lens
+    - RealVNC and SSH into Master Node
 - Low cost:
-    - A single Master Node and three Worker Node Cluster with Storage will cost less than $500.
+    - A single Master Node and three Worker Node Cluster with Storage will cost less than $500
 - Cloud Compute Resources are easily extendable:
-    - You can add a new Worker Node in less then an hour and that will only cost about $75.
+    - You can add a new Worker Node in less then an hour and that will only cost about $75
 - Portal Application is easily extendable:
-    - New Stacks can be easily added to the Catalog.
-    - You can add a new Stack with a database entry and this can be done in less than an hour.
-    - Can leverage custom Docker Images pushed to Docker Hub.
-    - Communication with Kubernetes via a custom Java Cluster API that leverages the Fabric8 library.
+    - New Stacks can be easily added to the Catalog
+    - You can add a new Stack with a database entry and this can be done in less than an hour
+    - Can leverage custom Docker Images pushed to Docker Hub
+    - Communication with Kubernetes via a custom Java Cluster API that leverages the Fabric8 library
 - Portal Application is easy to use:
     - Go to the Catalog
     - Pick your Stack or Database
     - Give your Application a Name
     - Select between a Tiny, Medium, and Large Container Size (amount of CPU and RAM)
     - Click the Provision button
-    - Go the My Apps tab
+    - Go the My Apps menu
     - Click the Deploy button to deploy a compressed version of your application
     - Click the Go button to access your application
+    - Go the the Register menu to register for an account
 
 ## Portal Screenshots
 <table>
