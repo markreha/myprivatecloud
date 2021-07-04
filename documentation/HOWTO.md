@@ -5,7 +5,7 @@
 <br/>
 This page will provide precscription instructions to build your own Private Cloud based on the My Private Cloud Reference Design.
 
-Go [back](https://github.com/markreha/myprivatecloud).
+Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
 
 Task  | Go To
 ------------- | -------------
@@ -15,10 +15,13 @@ Setup the Worker Nodes  | [Worker Node Tasks](#worker-node-tasks)
 Setup the Portal Application  | [Portal Application Tasks](#portal-application-tasks)
 
 ## IT Tasks
+TODO
 
 ## Master Node Tasks
+TODO
 
 ## Worker Node Tasks
+TODO
 
 ## Portal Application Tasks
 1. Clone this repository.
