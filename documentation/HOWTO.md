@@ -21,7 +21,8 @@ Go [back](https://github.com/markreha/myprivatecloud).
 7. Replace the new Kubernetes Config file with the one under src/main/resources/config.
 8. Update the application-dev.properties and application-prod.properties files with your database configuration.
 9. Run the application.
-10. Register a new user. In the USERS table set the ADMIN column to 1 for this new user.
-11. Log in as the new user.
+10. Register a new user. 
+11. In the USERS table set the ADMIN column to 1 for this new user.
+12. Log in as the new user.
 
 
