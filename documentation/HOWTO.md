@@ -17,8 +17,6 @@ Step | Task | Instructions
 4 | Setup the Portal Application  | [Portal Application Tasks](#portal-application-tasks)
 <br/>
 <br/>
-<br/>
-<br/>
 
 ## IT Tasks
 1. Order the Equipment
@@ -34,12 +32,15 @@ Step | Task | Instructions
 - TODO
 3. Assemble the Cluster:
 - TODO
+[Back to Top](#introduction)
 
 ## Master Node Tasks
 TODO
+[Back to Top](#introduction)
 
 ## Worker Node Tasks
 TODO
+[Back to Top](#introduction)
 
 ## Portal Application Tasks
 1. Clone this repository.
