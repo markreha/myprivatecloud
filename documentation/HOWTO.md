@@ -5,6 +5,11 @@ This page will provide precscription instructions to build a Private Cloud based
 
 Go [back](https://github.com/markreha/myprivatecloud).
 
+Task  | Go To
+------------- | -------------
+IT  | C[IT Tasks](#it-tasks)
+
+
 <table>
     <tr>
         <td align="center">[IT Tasks](#it-tasks)</td>
