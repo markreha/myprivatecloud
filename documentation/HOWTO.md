@@ -5,12 +5,23 @@ This page will provide precscription instructions to build a Private Cloud based
 
 Go [back](https://github.com/markreha/myprivatecloud).
 
-- IT Tasks:
+## IT Tasks:
 
-- Master Node Tasks:
+## Master Node Tasks:
 
-- Worker Node Tasks:
+## Worker Node Tasks:
 
-- Portal Node Tasks:
+## Portal Node Tasks:
+1. Clone this repository.
+2. Run the DDL script under documentation/design on an instance of a MySQL 8 database.
+3. Import the code under apps/portal into the Spring Tool Suite.
+4. Download the Kubernetes Config file (located on the Master Node at $HOME/.kube/config) to your local system.
+    - scp pi@[PI_IP_ADDRESS]:~/.kube/config ~/config
+6. Rename the download Kubernetes Config file from config to config-cluster.
+7. Replace the new Kubernetes Config file with the one under src/main/resources/config.
+8. Update the application-dev.properties and application-prod.properties files with your database configuration.
+9. Run the application.
+10. Register a new user. In the USERS table set the ADMIN column to 1 for this new user.
+11. Log in as the new user.
 
 
