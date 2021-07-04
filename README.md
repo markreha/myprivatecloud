@@ -1,5 +1,12 @@
-<img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/>
-<h1 align="center">My Private Cloud Reference Design</h1>
+<table>
+    <tr>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/></td>
+        <td lign="center"><h1>My Private Cloud Reference Design</h1></td>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/></td>
+    </tr>
+</table>
+
+
 <h3 align="center"><i> How to build a Private Cloud for less then $500 that will fit in a Shoe Box</i></h3>
 
 Can you design and build a fully functioning Private Cloud Platform using a cluster of Raspberry PI’s using current Cloud Technologies?
