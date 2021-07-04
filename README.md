@@ -9,7 +9,8 @@
     </tr>
 </table>
 
-#### Can you design and build a fully functioning Private Cloud Platform using a cluster of Raspberry PI’s using current Cloud Technologies?
+#### Introduction
+Can you design and build a fully functioning Private Cloud Platform using a cluster of Raspberry PI’s using current Cloud Technologies?
 <br/>
 <br/>
 I set out to answer this question. Use this reference design to get started!
@@ -122,7 +123,7 @@ Show me how to build [My Own Private Cloud](https://github.com/markreha/myprivat
     </tr>
 </table>
 
-[Back to Top](#can-you)
+[Back to Top](#introduction)
 
 <h5 align="center">Copyright @2021 On The Edge Software Consulting LLC</h5>
 
