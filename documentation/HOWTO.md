@@ -8,12 +8,12 @@ Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
 <br/>
 <br/>
 
-Task  | Go To
-------------- | -------------
-1. Setup the Hardware  | [IT Tasks](#it-tasks)
-2. Setup the Master Node  | [Master Node Tasks](#master-node-tasks)
-3. Setup the Worker Nodes  | [Worker Node Tasks](#worker-node-tasks)
-4. Setup the Portal Application  | [Portal Application Tasks](#portal-application-tasks)
+Step | Task | Instructions
+---- | ---- | ------------
+1 | Setup the Hardware  | [IT Tasks](#it-tasks)
+2 | Setup the Master Node  | [Master Node Tasks](#master-node-tasks)
+3 | Setup the Worker Nodes  | [Worker Node Tasks](#worker-node-tasks)
+4 | Setup the Portal Application  | [Portal Application Tasks](#portal-application-tasks)
 
 ## IT Tasks
 1. Order the Equipment
