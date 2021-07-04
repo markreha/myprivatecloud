@@ -7,7 +7,10 @@ Go [back](https://github.com/markreha/myprivatecloud).
 
 Task  | Go To
 ------------- | -------------
-IT  | C[IT Tasks](#it-tasks)
+Setup the Hardware  | [IT Tasks](#it-tasks)
+Setup the Master Node  | [Master Node Tasks](#master-node-tasks)
+Setup the Worker Nodes  | [Worker Node Tasks](#worker-node-tasks)
+Setup the Portal Application  | [Portal Application Tasks](#portal-application-tasks)
 
 
 <table>
