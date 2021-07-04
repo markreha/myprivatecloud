@@ -32,14 +32,17 @@ Step | Task | Instructions
 - TODO
 3. Assemble the Cluster:
 - TODO
+- 
 [Back to Top](#introduction)
 
 ## Master Node Tasks
 TODO
+
 [Back to Top](#introduction)
 
 ## Worker Node Tasks
 TODO
+
 [Back to Top](#introduction)
 
 ## Portal Application Tasks
