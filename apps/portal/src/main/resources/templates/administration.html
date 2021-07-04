@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+	<head>
+		<meta charset="UTF-8">
+		<title>My Private Cloud Main Page</title>
+	</head>
+
+	<body>
+		<div layout:fragment="content">
+			<!-- Error -->
+			<h5 class="error" th:text="${error}">Default Message Text</h5><br/>
+			
+			<!-- Users Title -->
+			<div align="center">
+				<h5>Portal Users</h5>
+			</div>
+
+			<!-- List of Users -->
+			<div class="table-responsive" style="overflow-x:auto;width:75%">			
+				<table class="table">
+				  <thead class="thead-light" align="center">
+				    <tr>
+				      <th scope="col">ID</th>
+				      <th scope="col">First Name</th>
+				      <th scope="col">Last Name</th>
+				      <th scope="col">Email Address</th>
+				      <th scope="col">Username</th>
+				      <th scope="col">Admin</th>
+				      <th scope="col">Active</th>
+				      <th scope="col">Actions</th>
+				    </tr>
+				  </thead>
+				  <tbody align="center">
+				    <tr th:each="user, loop: ${users}">
+				      <td th:text="*{user.id}">1</td>
+				      <td th:text="*{user.firstName}">Mark</td>
+				      <td th:text="*{user.lastName}">Reha</td>
+				      <td th:text="*{user.emailAddress}">markreha@mac.com</td>
+				      <td th:text="*{user.username}">test</td>
+				      <td th:text="*{user.isAdmin ? 'Yes' : 'No'}">Yes</td>
+				      <td th:text="*{user.isActive ? 'Yes' : 'No'}">Yes</td>
+				      <td>
+				      		<div th:if="*{!user.isAdmin}">
+					      		<form method="POST" action="/admin/doSuspendActivate" th:object="${formModel}">
+									<input type="hidden" th:value="${user.id}" name="id" />
+									<input type="hidden" th:value="${user.isActive ? '1' : '0'}" name="action" />
+				      				<button type="submit" class="btn btn-link" th:text="${user.isActive ? 'Suspend' : 'Activate'}">Suspend</button>
+				      			</form>
+			      			</div>
+				      		<div th:if="*{user.isAdmin}">
+				      			<button type="button" class="btn btn-link" disabled>Suspend</button>
+			      			</div>
+				      </td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+			
+		</div> <!-- End Thymeleaf Content -->	
+		
+	</body>
+
+</html>
+

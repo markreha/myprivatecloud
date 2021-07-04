@@ -1,0 +1,62 @@
+   .logo-right
+    {
+        position: absolute;
+        right: 3px;
+        top: 3px;
+    }
+    .logo-left
+    {
+        position: absolute;
+        left: 3px;
+        top: 3px;
+    }
+   @media screen and (min-width: 1024px) 
+	{ 
+		.logo-right 
+		{
+			width: 100px;
+			height: 100px;
+		}
+		.logo-left 
+		{
+			width: 100px;
+			height: 100px;
+		}
+	}
+    @media screen and (max-width: 1023px) 
+	{ 
+		.logo-right 
+		{
+			width: 80px;
+			height: 80px;
+		}
+		.logo-left 
+		{
+			width: 80px;
+			height: 80px;
+		}
+	}
+    .footer
+    {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: 1.9vmin;
+    }
+    td.padtd
+    {
+		padding: 5px;
+	}
+	.error
+	{
+		color: crimson
+	}
+	h1
+	{
+		font-size: 4.00vmin;
+	}
+	body
+	{
+		background:#F5F5F5;
+	}

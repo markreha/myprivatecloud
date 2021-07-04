@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+	<head>
+		<meta charset="UTF-8">
+		<title>My Private Cloud Exception Page</title>
+	</head>
+
+	<body>
+		<!-- Thymeleaf Content -->
+		<div layout:fragment="content">
+		
+			<!-- Title -->
+			<div align="center">
+				<h5>Exception</h5>
+			</div>
+		
+			<!-- Error -->
+			<h5 class="error" th:text="${error}">Default Message Text</h5><br/>
+
+		</div> 	<!-- End Thymeleaf Content -->	 
+	</body> 
+
+</html>

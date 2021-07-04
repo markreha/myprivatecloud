@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+	<head>
+		<meta charset="UTF-8">
+		<title>My Private Cloud Main Page</title>
+	</head>
+
+	<body>
+		<!-- Thymeleaf Content -->
+		<div layout:fragment="content">
+			<!-- Bootstrap Container to display Stack Type Tab Bar and all the Stacks -->
+			<div class="container">
+
+			  	<!-- Stacks Navigation Tabs -->
+				<nav>
+				  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+				    <a class="nav-link active" data-toggle="tab" href="#webservers" role="tab" aria-controls="webservers" aria-selected="true">Web Servers</a>
+				    <a class="nav-link" data-toggle="tab" href="#webstacks" role="tab" aria-controls="webstacks" aria-selected="false">Web App Servers</a>
+				    <a class="nav-link" data-toggle="tab" href="#databases" role="tab" aria-controls="databases" aria-selected="false">Databases</a>
+				    <a class="nav-link" data-toggle="tab" href="#tools" role="tab" aria-controls="tools" aria-selected="false">Tools</a>
+				  </div>
+				</nav>
+				<br/>
+
+				<!-- The Stacks -->
+				<div class="tab-content">
+							
+	 				<!-- Web Servers -->
+					<div class="row tab-pane active" role="tabpanel" id="webservers">
+	 					<div class="row">
+		 					<div class="col-md-3" th:each="stack, loop: ${htmlStacks}">
+								<div class="card mt-2" style="width: 15rem;height: 15rem">
+									<div class="card-body">
+				  					    <img th:src="*{'data:image/jpg;base64,'+ stack.image64}" width="50%" height="50%">
+										<h5 class="card-title" th:text="*{stack.longName}"></h5>					      	
+									  	<button class="btn btn-info" type="button" data-toggle="collapse" th:attr="data-target=${'#multiCollapse'+100+loop.index}, aria-controls=${'multiCollapse'+100+loop.index}" aria-expanded="false">Details</button>
+									  	<button class="btn btn-success" type="button" data-toggle="collapse" th:attr="data-target=${'#multiCollapse'+200+loop.index}, aria-controls=${'multiCollapse'+200+loop.index}" aria-expanded="false">Configure</button>
+										<div class="col">
+									    	<div class="collapse multi-collapse" th:attr="id=${'multiCollapse'+100+loop.index}" style="width: 20rem;">
+									      		<div class="card card-body" style="z-index: 1000">
+									      			<h5 class="card-text" th:text="*{stack.description}"></h5>
+									      			<p th:text="*{'Docker Image: ' + stack.dockerImage}"></p>
+									      			<p th:text="*{'Mount Path: ' + stack.podPath}"></p>
+									      			<p th:text="*{'Volume: ' + stack.pvClaim.friendlyName}"></p>
+									      			<p th:text="*{'Volume Subpath: ' + stack.category}"></p>
+									      			<p th:text="*{'Target Port: ' + stack.targetPort}"></p>
+									      			<p th:text="*{'Publish Port: ' + stack.publishPort}"></p>
+									      			<p th:text="*{'Code Deploy Enabled: ' + (stack.isCanDeployCode == true ? 'Yes' : 'No')}"></p>
+									      		</div>
+									    	</div>
+									  	</div>
+										<div class="col">
+									    	<div class="collapse multi-collapse" th:attr="id=${'multiCollapse'+200+loop.index}" style="width: 20rem;">
+									      		<div class="card card-body" style="z-index: 1000">
+													<form th:attr="id=${'form'+100+loop.index}" method="POST" action="/main/doProvision" th:object="${formModel}">
+														<input type="hidden" th:value="${stack.id}" name="stackId" />
+													    <label class="form-label">Name</label><br/>
+													    <input type="text" name="name" required /><br/><br/>
+													  	<div class="mb-3">
+													    	<label class="form-label">Container Size </label>
+															<select class="form-select" aria-label="Default select example" th:field="*{containerSize}">
+																<div th:each="stackSize: ${stackSizes}">
+																	<option th:value="${stackSize.id}" th:text="${stackSize.name + ' (' + stackSize.cpu + ' CPU and ' + stackSize.memory + ' of RAM)'}"></option>
+																</div>
+															</select>
+													  	</div>
+													  	<button type="submit" class="btn btn-primary">Provision</button>
+													</form>
+									      		</div>
+									    	</div>
+									  	</div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Web Stacks -->
+	 				<div class="tab-pane" role="tabpanel" id="webstacks">
+	 					<div class="row">
+	 						<div class="col-md-3" th:each="stack, loop: ${webappStacks}">
+								<div class="card mt-2" style="width: 15rem;height: 15rem;">
+									<div class="card-body">
+				  					    <img th:src="*{'data:image/jpg;base64,'+ stack.image64}" width="50%" height="50%">
+										<h5 class="card-title" th:text="*{stack.longName}"></h5>					      	
+									  	<button class="btn btn-info" type="button" data-toggle="collapse" th:attr="data-target=${'#multiCollapse'+300+loop.index}, aria-controls=${'multiCollapse'+300+loop.index}" aria-expanded="false">Details</button>
+									  	<button class="btn btn-success" type="button" data-toggle="collapse" th:attr="data-target=${'#multiCollapse'+400+loop.index}, aria-controls=${'multiCollapse'+400+loop.index}" aria-expanded="false">Configure</button>
+										<div class="col">
+									    	<div class="collapse multi-collapse" th:attr="id=${'multiCollapse'+300+loop.index}" style="width: 20rem;">
+									      		<div class="card card-body" style="z-index: 1000">
+									      			<h5 class="card-text" th:text="*{stack.description}"></h5>
+									      			<p th:text="*{'Docker Image: ' + stack.dockerImage}"></p>
+									      			<p th:text="*{'Mount Path: ' + stack.podPath}"></p>
+									      			<p th:text="*{'Volume: ' + stack.pvClaim.friendlyName}"></p>
+									      			<p th:text="*{'Volume Subpath: ' + stack.category}"></p>
+									      			<p th:text="*{'Target Port: ' + stack.targetPort}"></p>
+									      			<p th:text="*{'Publish Port: ' + stack.publishPort}"></p>
+									      			<p th:text="*{'Code Deploy Enabled: ' + (stack.isCanDeployCode == true ? 'Yes' : 'No')}"></p>
+									      		</div>
+									    	</div>
+									  	</div>
+										<div class="col">
+									    	<div class="collapse multi-collapse" th:attr="id=${'multiCollapse'+400+loop.index}" style="width: 20rem">
+									      		<div class="card card-body" style="z-index: 1000">
+													<form th:attr="id=${'form'+300+loop.index}" method="POST" action="/main/doProvision" th:object="${formModel}">
+														<input type="hidden" th:value="${stack.id}" name="stackId" />
+													    <label class="form-label">Name</label><br/>
+													    <input type="text" name="name" required /><br/><br/>
+													  	<div class="mb-3">
+													    	<label class="form-label">Container Size </label>
+															<select class="form-select" aria-label="Default select example" th:field="*{containerSize}">
+																<div th:each="stackSize: ${stackSizes}">
+																	<option th:value="${stackSize.id}" th:text="${stackSize.name + ' (' + stackSize.cpu + ' CPU and ' + stackSize.memory + ' of RAM)'}"></option>
+																</div>
+															</select>
+													  	</div>
+													  	<button type="submit" class="btn btn-primary">Provision</button>
+													</form>
+									      		</div>
+									    	</div>
+									  	</div>
+								    </div>
+								</div>
+							</div>
+						</div>	 				
+					</div>
+					
+					<!-- Databases -->
+	 				<div class="tab-pane" role="tabpanel" id="databases">
+	 					<div class="row">
+			 				<div class="col-md-3" th:each="stack, loop: ${databaseStacks}">
+								<div class="card mt-2" style="width: 15rem;height: 15rem">
+								    <div class="card-body">
+				  					    <img th:src="*{'data:image/jpg;base64,'+ stack.image64}" width="50%" height="50%">
+										<h5 class="card-title" th:text="*{stack.longName}"></h5>					      	
+									  	<button class="btn btn-info" type="button" data-toggle="collapse" th:attr="data-target=${'#multiCollapse'+500+loop.index}, aria-controls=${'multiCollapse'+500+loop.index}" aria-expanded="false">Details</button>
+									  	<button class="btn btn-success" type="button" data-toggle="collapse" th:attr="data-target=${'#multiCollapse'+600+loop.index}, aria-controls=${'multiCollapse'+600+loop.index}" aria-expanded="false">Configure</button>
+										<div class="col">
+									    	<div class="collapse multi-collapse" th:attr="id=${'multiCollapse'+500+loop.index}" style="width: 20rem;">
+									      		<div class="card card-body"  style="z-index: 1000">
+									      			<h5 class="card-text" th:text="*{stack.description}"></h5>
+									      			<p th:text="*{'Docker Image: ' + stack.dockerImage}"></p>
+									      			<p th:text="*{'Mount Path: ' + stack.podPath}"></p>
+									      			<p th:text="*{'Volume: ' + stack.pvClaim.friendlyName}"></p>
+									      			<p th:text="*{'Volume Subpath: ' + stack.category}"></p>
+									      			<p th:text="*{'Target Port: ' + stack.targetPort}"></p>
+									      			<p th:text="*{'Publish Port: ' + stack.publishPort}"></p>
+									      			<p th:text="*{'Code Deploy Enabled: ' + (stack.isCanDeployCode == true ? 'Yes' : 'No')}"></p>
+									      		</div>
+									    	</div>
+									  	</div>
+										<div class="col">
+									    	<div class="collapse multi-collapse" th:attr="id=${'multiCollapse'+600+loop.index}" style="width: 20rem;">
+									      		<div class="card card-body" style="z-index: 1000">
+													<form th:attr="id=${'form'+500+loop.index}" method="POST" action="/main/doProvision" th:object="${formModel}">
+														<input type="hidden" th:value="${stack.id}" name="stackId" />
+												    	<label class="form-label">Name</label><br/>
+												    	<input type="text" name="name" required /><br/><br/>
+													  	<div class="mb-3">
+													    	<label class="form-label">Container Size </label>
+															<select class="form-select" aria-label="Default select example" th:field="*{containerSize}">
+																<div th:each="stackSize: ${stackSizes}">
+																	<option th:value="${stackSize.id}" th:text="${stackSize.name + ' (' + stackSize.cpu + ' CPU and ' + stackSize.memory + ' of RAM)'}"></option>
+																</div>
+															</select>
+													  	</div>
+													  	<button type="submit" class="btn btn-primary">Provision</button>
+													</form>
+									      		</div>
+									    	</div>
+									  	</div>
+								    </div>
+								</div>
+							</div>
+						</div> 					 				
+					</div> 
+
+					<!-- Tools -->
+	 				<div class="tab-pane" role="tabpanel" id="tools">
+	 					<div class="row">
+			 				<div class="col-md-3" th:each="stack, loop: ${toolStacks}">
+								<div class="card mt-2" style="width: 15rem;height: 15rem">
+								    <div class="card-body">
+				  					    <img th:src="*{'data:image/jpg;base64,'+ stack.image64}" width="50%" height="50%">
+										<h5 class="card-title" th:text="*{stack.longName}"></h5>					      	
+									  	<button class="btn btn-info" type="button" data-toggle="collapse" th:attr="data-target=${'#multiCollapse'+700+loop.index}, aria-controls=${'multiCollapse'+700+loop.index}" aria-expanded="false">Details</button>
+									  	<button class="btn btn-success" type="button" data-toggle="collapse" th:attr="data-target=${'#multiCollapse'+800+loop.index}, aria-controls=${'multiCollapse'+800+loop.index}" aria-expanded="false">Configure</button>
+										<div class="col">
+									    	<div class="collapse multi-collapse" th:attr="id=${'multiCollapse'+700+loop.index}" style="width: 20rem;">
+									      		<div class="card card-body"  style="z-index: 1000">
+									      			<h5 class="card-text" th:text="*{stack.description}"></h5>
+									      			<p th:text="*{'Docker Image: ' + stack.dockerImage}"></p>
+									      			<p th:text="*{'Mount Path: ' + stack.podPath}"></p>
+									      			<p th:text="*{'Volume: ' + stack.pvClaim.friendlyName}"></p>
+									      			<p th:text="*{'Volume Subpath: ' + stack.category}"></p>
+									      			<p th:text="*{'Target Port: ' + stack.targetPort}"></p>
+									      			<p th:text="*{'Publish Port: ' + stack.publishPort}"></p>
+									      			<p th:text="*{'Code Deploy Enabled: ' + (stack.isCanDeployCode == true ? 'Yes' : 'No')}"></p>
+									      		</div>
+									    	</div>
+									  	</div>
+										<div class="col">
+									    	<div class="collapse multi-collapse" th:attr="id=${'multiCollapse'+800+loop.index}" style="width: 20rem;">
+									      		<div class="card card-body" style="z-index: 1000">
+													<form th:attr="id=${'form'+500+loop.index}" method="POST" action="/main/doProvision" th:object="${formModel}">
+														<input type="hidden" th:value="${stack.id}" name="stackId" />
+												    	<label class="form-label">Name</label><br/>
+												    	<input type="text" name="name" required /><br/><br/>
+													  	<div class="mb-3">
+													    	<label class="form-label">Container Size </label>
+															<select class="form-select" aria-label="Default select example" th:field="*{containerSize}">
+																<div th:each="stackSize: ${stackSizes}">
+																	<option th:value="${stackSize.id}" th:text="${stackSize.name + ' (' + stackSize.cpu + ' CPU and ' + stackSize.memory + ' of RAM)'}"></option>
+																</div>
+															</select>
+													  	</div>
+													  	<button type="submit" class="btn btn-primary">Provision</button>
+													</form>
+									      		</div>
+									    	</div>
+									  	</div>
+								    </div>
+								</div>
+							</div>
+						</div> 					 				
+					</div> 
+					
+				</div> <!-- End Tab Content -->										
+			</div> <!-- End Bootstrap Container -->				
+		</div> 	<!-- End Thymeleaf Content -->	 
+	</body> 
+
+</html>
+

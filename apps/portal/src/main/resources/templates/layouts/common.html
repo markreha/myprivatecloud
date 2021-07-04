@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Thymeleaf Common Fragments</title>
+	</head>
+	
+	<body>
+
+		<!-- Common Header Fragment -->
+		<div th:fragment="header">
+			<div align="center" style="padding:12px">
+				<div>
+					<h1>Welcome to My Private Cloud</h1>
+				</div>
+				<div class="logo-right">
+					<img th:src="@{/images/company-logo.gif}" width="75%" height="75%"/>
+				</div>						
+				<div class="logo-left">
+					<img th:src="@{/images/company-logo.gif}" width="75%" height="75%"/>
+				</div>								
+			</div>
+			
+			<!-- Nav Bar -->
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<!-- Brand and toggle get grouped for better mobile display -->
+			  	<a class="navbar-brand" href="#">On The Edge Software Consulting</a>
+			  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    	<span class="navbar-toggler-icon"></span>
+			  	</button>
+			    <!-- Collection of Main navigation links -->
+			  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  		<!-- Main Menu Items -->
+			    	<ul class="navbar-nav mr-auto">
+			      		<li class="nav-item"><a class="nav-link" href="https://github.com/markreha/myprivatecloud" target="_blank">Get The Code <span class="sr-only">(current)</span></a></li>
+			      		<li class="nav-link" th:if="${session.user == null}" data-toggle="popover" title="About My Private Cloud Portal" data-content="My Private Cloud Portal     v1.0.0">About</li>
+			      		<li class="nav-item" th:if="${session.user == null}"><a class="nav-link" href="/login-register/register">Register</a></li>
+			      		<li class="nav-item" th:if="${session.user != null}"><a class="nav-link" href="/main/stacks">Catalog</a></li>
+			      		<li class="nav-item" th:if="${session.user != null}"><a class="nav-link" href="/myapps/">My Apps</a></li>
+			      		<li class="nav-item" th:if="${session.user != null && session.user.isAdmin}"><a class="nav-link" href="/admin/">Admin</a></li>
+			    	</ul>
+			  	</div>
+			    <!-- Log In/Log Off Menu Item -->
+			  	<div th:if="${session.user == null}"><a class="nav-link" href="/login-register/">Log In</a></div>
+			  	<div th:if="${session.user != null}"><a class="nav-link" href="/login-register/logout">Log Out</a></div>
+			</nav>
+			
+			<!-- Page Title -->
+			<h2 th:text="${title}">Default Message Text</h2><br/>
+		</div>
+		
+		<!--  Common Footer Fragment -->
+		<div th:fragment="footer"
+			><h5 class="footer">Copyright @2021 On The Edge Software Consulting LLC</h5>
+		</div>
+	</body>
+</html>
+

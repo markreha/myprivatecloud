@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+	<head>
+		<meta charset="UTF-8">
+		<title>My Private Cloud Main Page</title>
+	</head>
+
+	<body>
+		<div layout:fragment="content">
+			<!-- Error -->
+			<h5 class="error" th:text="${error}">Default Message Text</h5><br/>
+			
+			<!-- Display if no applications -->
+			<div th:if="${apps.empty}" align="center">
+				<h5>You have no applications deployed.</h5>
+			</div>
+
+			<!-- Bootstrap Container to My Applications -->
+			<div class="container">
+			
+				<div class="row">
+	 				<div class="col-md-4" th:each="app, loop: ${apps}">
+						<div class="card mt-2" style="width: 22rem;height: 22rem">
+						    <div class="card-body">
+						    	<div class="card-header" style="font-size:20px; font-weight:bold;" th:text="*{app.name}"></div>
+		  					    <img th:src="*{'data:image/jpg;base64,'+ app.stack.image64}" width="40%" height="40%">
+								<h6 class="card-title" th:text="*{app.stack.longName}"></h6>
+								<div class="card-footer">
+							    	<a th:if="*{app.stack.canDeployCode} or *{app.stack.category != 'database'}" th:attr="href=${'http://' + app.appUrl}" class="btn btn-success" role="button" target="_blank">Go</a>
+								  	<button class="btn btn-info" type="button" data-toggle="collapse" th:attr="data-target=${'#multiCollapse'+100+loop.index}, aria-controls=${'multiCollapse'+100+loop.index}" aria-expanded="false">Details</button>
+									<button th:if="*{app.stack.canDeployCode}" class="btn btn-primary" type="button" data-toggle="collapse" th:attr="data-target=${'#multiCollapse'+200+loop.index}, aria-controls=${'multiCollapse'+200+loop.index}" aria-expanded="false">Deploy Code</button>
+									<div class="col">
+								    	<div class="collapse multi-collapse" th:attr="id=${'multiCollapse'+100+loop.index}" style="width: 40rem;">
+								      		<div class="card card-body" style="width: 40rem;z-index: 1000">
+								      			<h5 class="card-text" th:text="*{app.stack.description}"></h5>
+								      			<p th:text="*{'Docker Image: ' + app.stack.dockerImage}"></p>
+								      			<p th:text="*{'Mount Path: ' + app.stack.podPath}"></p>
+								      			<p th:text="*{'Volume: ' + app.stack.pvClaim.friendlyName}"></p>
+								      			<p th:text="*{'Volume Subpath: ' + app.stack.category}"></p>
+								      			<p th:text="*{'Target Port: ' + app.stack.targetPort}"></p>
+								      			<p th:text="*{'Publish Port: ' + app.stack.publishPort}"></p>
+								      			<p th:text="*{'Code Deploy Enabled: ' + (app.stack.canDeployCode == true ? 'Yes' : 'No')}"></p>
+								      			<p th:text="*{'Stack Size: ' + app.stackSize.name + ' (' + app.stackSize.cpu + ' CPU and ' + app.stackSize.memory + ' of RAM)'}"></p>
+								      			<div th:if="*{!app.stack.canDeployCode}">
+									      			<p th:text="*{'Appplication location: ' + app.appUrl}"></p>
+								      			</div>
+												<div th:each="envar: ${app.envVariables}">
+													<p th:text="*{'Variable: ' + envar.name + ' = ' + envar.value}"></p>
+									  			</div>
+								      		</div>
+								    	</div>
+								    </div>
+									<div class="col">
+								    	<div class="collapse multi-collapse" th:attr="id=${'multiCollapse'+200+loop.index}" style="width: 20rem;">
+								      		<div class="card card-body" style="z-index: 1000">
+								      			<br/>
+												<form method="POST" action="/myapps/doDeployment" enctype="multipart/form-data" th:object="${formModel1}">
+													<input type="hidden" th:value="${app.appId}" name="appId" />
+													<input type="file" name="file" required />
+											  		<button type="submit" class="btn btn-primary">Deploy</button>
+											  	</form>
+								      		</div>
+								    	</div>
+									</div>
+									<div class="col" style="padding:5px">
+										<button class="btn btn-danger" data-toggle="modal" th:attr="data-target=${'#deleteFormModel'+300+loop.index}">Delete</button>
+	 									<div th:attr="id=${'deleteFormModel'+300+loop.index}" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+										  	<div class="modal-dialog" role="document">
+										    	<div class="modal-content">
+										      		<div class="modal-header">
+										        		<h5 class="modal-title" id="exampleModalLabel">Delete Appplication</h5>
+										        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										      		</div>
+										      		<div class="modal-body">
+										       			<p>Are you sure you want to delete your application?</p>
+										      		</div>
+										      		<div class="modal-footer">
+														<form method="POST" action="/myapps/doDelete" th:object="${formModel2}">
+															<input type="hidden" th:value="${app.id}" name="id" />
+															<input type="hidden" th:value="${app.appId}" name="appId" />
+										       				<button type="submit" class="btn btn-danger">Yes</button>
+															<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+														</form>
+										      		</div>
+										    	</div>
+										  	</div>
+										</div>
+									</div>
+								</div>								
+						    </div>
+						</div>
+					</div>
+				</div>
+								
+			</div> <!-- End Bootstrap Container -->				
+		</div> <!-- End Thymeleaf Content -->
+	</body>
+
+</html>
+

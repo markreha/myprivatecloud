@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+	<head>
+		<meta charset="UTF-8">
+		<title>My Private Cloud Registration Page</title>
+	</head>
+
+	<body>
+		<div layout:fragment="content">
+			<div class="container" style="width:40%">
+				<form class="form-horizontal" action="#" th:action="@{doRegister}" th:object="${registerModel}" method="post">
+					<div class="form-group row">
+				    	<label for="firstName" class="col-form-label text-right col-md-4">First Name</label>
+				    	<div class="col-md-4">
+				    		<input type="text" class="form-control" id="firstName" placeholder="Enter First Name" th:field="*{firstName}" required />
+				    	</div>
+				    </div>
+					<div class="form-group row">
+				    	<label for="lastName" class="col-form-label text-right col-md-4">Last Name</label>
+				    	<div class="col-md-4">
+				    		<input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" th:field="*{lastName}" required />
+				    	</div>
+				    </div>
+					<div class="form-group row">
+				    	<label for="emailAddress" class="col-form-label text-right col-md-4">Email</label>
+				    	<div class="col-md-4">
+				    		<input type="email" class="form-control" id="emailAddress" placeholder="Enter Email Address" th:field="*{emailAddress}" required />
+				    	</div>
+				    </div>
+					<div class="form-group row">
+				    	<label for="username" class="col-form-label text-right col-md-4">User Name</label>
+				    	<div class="col-md-4">
+				    		<input type="text" class="form-control" id="username" placeholder="Enter Account User Name" th:field="*{username}" required />
+				    	</div>
+				    </div>
+					<div class="form-group row">
+				    	<label for="password" class="col-form-label text-right col-md-4">Password</label>
+				    	<div class="col-md-4">
+				    		<input type="password" class="form-control" id="password" placeholder="Enter Account User Password" th:field="*{password}" required />
+				    	</div>
+				    </div>
+			  		<button type="submit" class="btn btn-primary">Register</button>
+					<div th:if="${#fields.hasErrors('*')}">List of Field Validation Errors</div>
+	   			 	<div th:each="err : ${#fields.errors('*')}">
+	             		<span th:text="${err}" class="fieldError error"></span>
+	             	</div>
+	   			 </form>
+	   		</div>
+ 		</div>	
+	</body>
+
+</html>
+
+
+
