@@ -2,7 +2,7 @@
 <h3 align="center"><i> How to build a Private Cloud for less then $500 that will fit in a Shoe Box</i></h3>
 
 #### Introduction
-This page will provide prescriptive instructions that you can use to build your own Private Cloud based on the My Private Cloud Reference Design.
+This page will provide prescriptive instructions that you can use to build your own Private Cloud based on the My Private Cloud Reference Design. There is nothing in this reference design that is specific to a Raspberry Pi 4. The Raspberry Pi 4 could be easily substitued for an Ubuntu Server running in a virtual machine. If you want to try this reference design using a cluster of Ubuntu Servers running in virtual machines then just skip the IT Tasks below.
 
 Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
 <br/>
@@ -10,10 +10,10 @@ Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
 
 Task  | Go To
 ------------- | -------------
-Setup the Hardware  | [IT Tasks](#it-tasks)
-Setup the Master Node  | [Master Node Tasks](#master-node-tasks)
-Setup the Worker Nodes  | [Worker Node Tasks](#worker-node-tasks)
-Setup the Portal Application  | [Portal Application Tasks](#portal-application-tasks)
+1. Setup the Hardware  | [IT Tasks](#it-tasks)
+2. Setup the Master Node  | [Master Node Tasks](#master-node-tasks)
+3. Setup the Worker Nodes  | [Worker Node Tasks](#worker-node-tasks)
+4. Setup the Portal Application  | [Portal Application Tasks](#portal-application-tasks)
 
 ## IT Tasks
 1. Order the Equipment
