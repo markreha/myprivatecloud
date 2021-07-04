@@ -72,7 +72,7 @@ This repository contains the design, code, and documentation for the My Private 
 - D-Link DGS-108 8 Port Gigibit Network Switch
 - Network Cables and Pi Fans
 - Power Strip
-- 500GB WD USB 3 SSD Drive
+- 500GB WD USB 3 SSD Drive (used as a shared Network Drive)
 
 ## Software
 - Raspberry Pi:
