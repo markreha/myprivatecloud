@@ -5,13 +5,15 @@ This page will provide precscription instructions to build a Private Cloud based
 
 Go [back](https://github.com/markreha/myprivatecloud).
 
-## IT Tasks:
+ [Portal Application Tasks](#portal-application-tasks)
 
-## Master Node Tasks:
+## IT Tasks
 
-## Worker Node Tasks:
+## Master Node Tasks
 
-## Portal Node Tasks:
+## Worker Node Tasks
+
+## Portal Application Tasks
 1. Clone this repository.
 2. Run the DDL script under documentation/design on an instance of a MySQL 8 database.
 3. Import the code under apps/portal into the Spring Tool Suite.
