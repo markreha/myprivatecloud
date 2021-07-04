@@ -8,7 +8,7 @@ Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
 <br/>
 <br/>
 
-## Prescriptive Instructions
+## Instructions
 Step | Task | Instructions
 ---- | ---- | ------------
 1 | Setup the Hardware  | [IT Tasks](#it-tasks)
