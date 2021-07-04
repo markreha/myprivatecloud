@@ -5,3 +5,12 @@ This page will provide precscription instructions to build a Private Cloud based
 
 Go [back](https://github.com/markreha/myprivatecloud).
 
+- IT Tasks:
+
+- Master Node Tasks:
+
+- Worker Node Tasks:
+
+- Portal Node Tasks:
+
+
