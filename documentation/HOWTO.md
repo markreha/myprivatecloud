@@ -25,7 +25,9 @@ Setup the Portal Application  | [Portal Application Tasks](#portal-application-t
 - 1 [Port Gigibit Ehternet Network Switch](https://www.amazon.com/gp/product/B000BCC0LO/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
 - 1 [500GB WD USB 3 SSD Drive](https://www.amazon.com/dp/B07VSPL8FJ?ref=ppx_pop_mob_ap_share)
 - 1 [Power Strip](https://www.amazon.com/dp/B091THXBFJ?ref=ppx_pop_mob_ap_share)
-2. Assemble the Cluster:
+2. Create the Pi Boot Image:
+- TODO
+3. Assemble the Cluster:
 - TODO
 
 ## Master Node Tasks
