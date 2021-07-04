@@ -10,7 +10,7 @@ This repository contains the design, code, and documentation for the My Private 
 
 <table>
     <tr>
-        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/design/Logical%20Architecture.png"/></td>
+        <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/design/Logical%20Architecture.png" href="#"/></td>
          <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/design/Physical%20Architecture.png"/></td>
     </tr>
 </table>
