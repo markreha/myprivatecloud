@@ -1,5 +1,3 @@
-<img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/><h1 align="center">My Private Cloud Reference Design</h1><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/>
-<br/>
 <table border=0>
     <tr>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/></td>
