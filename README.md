@@ -1,6 +1,6 @@
 <table>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/></td>
-        <td align="center"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Private Cloud Reference Design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1></td>
+        <td align="center"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Private Cloud Reference Design</h1></td>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/></td>
     </tr>
     <tr>
