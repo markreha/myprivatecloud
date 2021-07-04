@@ -15,6 +15,10 @@ Step | Task | Instructions
 2 | Setup the Master Node  | [Master Node Tasks](#master-node-tasks)
 3 | Setup the Worker Nodes  | [Worker Node Tasks](#worker-node-tasks)
 4 | Setup the Portal Application  | [Portal Application Tasks](#portal-application-tasks)
+<br/>
+<br/>
+<br/>
+<br/>
 
 ## IT Tasks
 1. Order the Equipment
