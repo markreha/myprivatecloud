@@ -23,6 +23,7 @@ This repository contains the design, code, and documentation for the My Private 
     - Databases: MySQL, PostgreSQL, MongoDB
     - Tools: Visual Studio Code
     - ASP.NET Core and NodeJS in the works........
+    - Deploy Web Sites, Java Spring and Spring Boot applications, PHP and PHP Laravel applications
 - Cloud Management:
     - Web based Portal Application
     - Desktop based Lens Application (with Prometheus)
