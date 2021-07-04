@@ -68,8 +68,9 @@ This repository contains the design, code, and documentation for the My Private 
 </table>
 
 ## Hardware
-- Raspberry Pi 4 with 4GB of RAM and 32Gb SD Card
+- Raspberry Pi 4 Model B+ with 4GB of RAM and 32Gb SD Card
 - D-Link DGS-108 8 Port Gigibit Network Switch
+- Network Cables and Pi Fans
 - Power Strip
 - 500GB WD USB 3 SSD Drive
 
