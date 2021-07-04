@@ -1,12 +1,13 @@
 <table>
     <tr>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/></td>
         <td align="center"><h1>My Private Cloud</h1> <h3>Reference Design</h3></td>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/></td>
     </tr>
     <tr>
-        <td align="center" colspan="4"><h3><i> How to build a Private Cloud for less then $500 that will fit in a Shoe Box</i></h3></td>
+        <td align="center" colspan="3"><h3><i> How to build a Private Cloud for less then $500 that will fit in a Shoe Box</i></h3></td>
     </tr>
 </table>
 
