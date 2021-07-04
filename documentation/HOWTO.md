@@ -10,7 +10,7 @@ Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
 
 ## Instructions
 Step | Task | Instructions
----- | ---- | ------------
+:--: | ---- | ------------
 1 | Setup the Hardware  | [IT Tasks](#it-tasks)
 2 | Setup the Master Node  | [Master Node Tasks](#master-node-tasks)
 3 | Setup the Worker Nodes  | [Worker Node Tasks](#worker-node-tasks)
