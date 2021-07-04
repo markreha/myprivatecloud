@@ -1,6 +1,5 @@
-<div width = "100%">
 <table width="100%">
-    <tr>
+    <tr width="100%">
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/></td>
         <td align="center"><h1>My Private Cloud <br/> Reference Design</h1></td>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/></td>
@@ -9,7 +8,6 @@
         <td align="center" colspan="3"><h3><i> How to build a Private Cloud for less then $500 that will fit in a Shoe Box</i></h3></td>
     </tr>
 </table>
-</div>
 
 #### Introduction
 Can you design and build a fully functioning Private Cloud Platform using a cluster of Raspberry PI’s using current Cloud Technologies?
