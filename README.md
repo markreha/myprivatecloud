@@ -1,4 +1,4 @@
-<table style="border: none;">
+<table style="border: 1px solid black;">
     <tr>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/></td>
         <td align="center"><h1>My Private Cloud Reference Design</h1></td>
