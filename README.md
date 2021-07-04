@@ -1,3 +1,6 @@
+------------- | ------------- | -------------
+<img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/>  | <h1>My Private Cloud Reference Design</h1> | <img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/>
+
 <table border=0>
     <tr>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/></td>
