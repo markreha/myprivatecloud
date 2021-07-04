@@ -9,7 +9,7 @@
 </table>
 
 #### Introduction
-&#9;&#9;Can you design and build a fully functioning Private Cloud Platform using a cluster of Raspberry PI’s using current Cloud Technologies?
+<pre>&#9;&#9;</pre>Can you design and build a fully functioning Private Cloud Platform using a cluster of Raspberry PI’s using current Cloud Technologies?
 <br/>
 I set out to answer this question. Use this reference design to get started!
 
