@@ -58,7 +58,7 @@ Show me how to build [My Own Private Cloud](https://github.com/markreha/myprivat
     - Go the the Register menu to register for an account
 
 ## Portal Screenshots
-View the [JavaDoc](https://github.com/markreha/myprivatecloud/blob/main/documentation/javadoc/simple/index.html).
+View the [JavaDoc](https://htmlpreview.github.io/?https://github.com/markreha/myprivatecloud/blob/main/documentation/javadoc/simple/index.html).
 <table>
     <tr>
         <td align="center"><b>Login</b><br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Login.png"/></td>
