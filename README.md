@@ -15,6 +15,8 @@ This repository contains the design, code, and documentation for the My Private 
     </tr>
 </table>
 
+Show me how to build [My Private Cloud!](https://github.com/markreha/myprivatecloud/blob/main/documentation/HOWTO.md).
+
 ## Features
 - Fully functioning Private Cloud:
     - Capable of running any number of Web Servers, common Web Stacks, Databases, and Tools. Examples include:
