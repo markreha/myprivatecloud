@@ -12,16 +12,6 @@ Setup the Master Node  | [Master Node Tasks](#master-node-tasks)
 Setup the Worker Nodes  | [Worker Node Tasks](#worker-node-tasks)
 Setup the Portal Application  | [Portal Application Tasks](#portal-application-tasks)
 
-
-<table>
-    <tr>
-        <td align="center">[IT Tasks](#it-tasks)</td>
-        <td align="center">[Master Node Tasks](#master-node-tasks)</td>
-        <td align="center">[Worker Node Tasks](#worker-node-tasks)</td>
-        <td align="center">[Portal Application Tasks](#portal-application-tasks)</td>
-    </tr>
-</table>
-   
 ## IT Tasks
 
 ## Master Node Tasks
@@ -41,5 +31,7 @@ Setup the Portal Application  | [Portal Application Tasks](#portal-application-t
 10. Register a new user. 
 11. In the USERS table set the ADMIN column to 1 for this new user.
 12. Log in as the new user.
+
+[Back to Top](#it-tasks)
 
 
