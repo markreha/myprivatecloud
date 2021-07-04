@@ -5,7 +5,7 @@ This page will provide precscription instructions to build a Private Cloud based
 
 Go [back](https://github.com/markreha/myprivatecloud).
 
- [Portal Application Tasks](#portal-application-tasks)
+[IT Tasks](#it-tasks) [Master Node Tasks](#master-node-tasks) [Worker Node Tasks](#worker-node-tasks) [Portal Application Tasks](#portal-application-tasks)
 
 ## IT Tasks
 
