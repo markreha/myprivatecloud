@@ -34,4 +34,6 @@ Setup the Portal Application  | [Portal Application Tasks](#portal-application-t
 
 [Back to Top](#it-tasks)
 
+<h3 align="center">Copyright @2021 On The Edge Software Consulting LLC</h3>
+
 
