@@ -1,4 +1,4 @@
-<table>
+<table width="100%">
     <tr>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/></td>
         <td align="center"><h1>My Private Cloud <br/> Reference Design</h1></td>
