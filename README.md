@@ -1,11 +1,10 @@
-<table>
+<table border=0>
     <tr>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/></td>
-        <td lign="center"><h1>My Private Cloud Reference Design</h1></td>
+        <td align="center"><h1>My Private Cloud Reference Design</h1></td>
         <td><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/logo.jpg"/></td>
     </tr>
 </table>
-
 
 <h3 align="center"><i> How to build a Private Cloud for less then $500 that will fit in a Shoe Box</i></h3>
 
