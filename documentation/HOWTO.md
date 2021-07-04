@@ -3,5 +3,5 @@
 
 This page will provide precscription instructions to build a Private Cloud based on this Reference Design.
 
-Go [back](https://github.com/markreha/myprivatecloud/blob/main/README.md).
+Go [back](https://github.com/markreha/myprivatecloud).
 
