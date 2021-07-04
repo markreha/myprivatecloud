@@ -114,5 +114,8 @@ Show me how to build [My Own Private Cloud](https://github.com/markreha/myprivat
     </tr>
 </table>
 
+[Back to Top](#features)
+
+<h5 align="center">Copyright @2021 On The Edge Software Consulting LLC</h5>
 
 
