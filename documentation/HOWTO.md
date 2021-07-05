@@ -15,6 +15,7 @@ Step | Task | Instructions
 2 | Setup the Master Node  | [Master Node Tasks](#master-node-tasks)
 3 | Setup the Worker Nodes  | [Worker Node Tasks](#worker-node-tasks)
 4 | Setup the Portal Application  | [Portal Application Tasks](#portal-application-tasks)
+5 | Setup the Lens Application  | [Lens Application Tasks](#lens-application-tasks)
 <br/>
 <br/>
 
@@ -164,6 +165,19 @@ TODO
 10. Register a new user. 
 11. In the USERS table set the ADMIN column to 1 for this new user.
 12. Log in as the new user.
+
+[Back to Top](#introduction)
+
+## Lens Application Tasks
+  1. Download and install [Lens](https://k8slens.dev) for your operating system.
+  2. Setup Lens using the Master Node Kubernetes config file (located in $HOME/.kube/config).
+  3. Under the Lens settings install Prometheous by clicking Install under the Metrics Feature. NOTE: There is a bug in Lens, the kube-state-metrics deployment is setup to use a non Arm version of the Docker image. Perform the following steps in Lens to fix this problem:
+	- In Lens go to Workloads->Deployments. Go the kube-state-metrics deployment.
+	- Make the following edits to the Container Spec for kube-state-metrics:
+		- Update the image from quay.io/coreos/kube-state-metrics:v1.9.7 to k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
+		- Update both kubernetes.io/arch key settings value from amd64 to arm
+	- Click the Save & Close button.
+	- Restart the Lens deployment.
 
 [Back to Top](#introduction)
 
