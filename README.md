@@ -123,11 +123,11 @@ View the [JavaDoc](https://htmlpreview.github.io/?https://github.com/markreha/my
 ## Cloud Management and Monitoring
 <table>
     <tr>
-        <td align="center"><b>Lens - Cluster</b><br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Lens1.png"/></td>
-        <td align="center"><b>Lens - Nodes</b><br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Lens2.png"/></td>
+        <td align="center"><b>Lens - View Entire Cluster</b><br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Lens1.png"/></td>
+        <td align="center"><b>Lens - View All Nodes</b><br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Lens2.png"/></td>
     </tr>
     <tr>
-        <td align="center"><b>Lens - Pods</b><br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Lens3.png"/></td>
+        <td align="center"><b>Lens - View All Pods</b><br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Lens3.png"/></td>
         <td align="center"><b>Portal Users</b><br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Admin1.png"/></td>
     </tr>
 </table>
