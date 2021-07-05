@@ -51,15 +51,17 @@ Show me how to build [My Own Private Cloud](https://github.com/markreha/myprivat
     - You can leverage your own custom Docker Images that have been pushed to Docker Hub
     - Communication with Kubernetes via a custom Java Cluster API that leverages the Fabric8 library
 - Portal Application is easy to use:
-    - Go to the Catalog
-    - Pick your Stack or Database
-    - Give your Application a Name
-    - Select between a Tiny, Medium, and Large Container Size (amount of CPU and RAM)
-    - Click the Provision button
-    - Go the My Apps menu
-    - Click the Deploy button to deploy a compressed version of your application
-    - Click the Go button to access your application
-    - Go the the Register menu to register for an account
+    - Go to the Register menu and register for your own account
+    - Go to the Login menu and log into the application
+    - Go to the Catalog menu
+        - Pick your Stack or Database
+        - Click the Customize button
+        - Give your Application a Name
+        - Select between a Tiny, Medium, and Large Container Size (amount of CPU and RAM)
+        - Click the Provision button
+    - Go to the My Apps menu
+        - Click the Deploy button to deploy a compressed version of your application
+        - Click the Go button to access your application
 
 ## Portal Screenshots
 View the [JavaDoc](https://htmlpreview.github.io/?https://github.com/markreha/myprivatecloud/blob/main/documentation/javadoc/simple/index.html).
