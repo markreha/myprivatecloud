@@ -53,13 +53,13 @@ Show me how to build [My Own Private Cloud](https://github.com/markreha/myprivat
 - Portal Application is easy to use:
     - Go to the Register menu and register for your own account
     - Go to the Login menu and log into the application
-    - Go to the Catalog menu
+    - Go to the Catalog menu:
         - Pick your Stack or Database
         - Click the Customize button
         - Give your Application a Name
         - Select between a Tiny, Medium, and Large Container Size (amount of CPU and RAM)
         - Click the Provision button
-    - Go to the My Apps menu
+    - Go to the My Apps menu:
         - Click the Deploy button to deploy a compressed version of your application
         - Click the Go button to access your application
 
