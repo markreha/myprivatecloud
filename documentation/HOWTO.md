@@ -28,6 +28,7 @@ You need to have moderate experience and skills in the following in order to com
 6. [Kubernetes](https://kubernetes.io)
 
 ## IT Tasks
+It should be noted that any variable that will be unique to your environment will be noted in the instructions in brackets (i.e. [PI IP ADDRESS]).
 1. Order the Equipment
 - 4 [Raspberry Pi 4 Model B with 4GB of RAM](https://www.amazon.com/gp/product/B07TVVJZQT/ref=ppx_yo_dt_b_asin_title_o01_s02?ie=UTF8&psc=1)
 - 4 [Raspberry Pi 4 32Gb SD Cards](https://www.amazon.com/gp/product/B06XWN9Q99/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
@@ -81,7 +82,8 @@ You need to have moderate experience and skills in the following in order to com
 	10. Plug an Ethernet Cable into each of the Raspberry Pi and a port on the Ethernet Network Switch. Power on the Ethernet Network Switch.
 	11. Turn the power on the Power Strip.
 	12. Use VNC Viewer to access each of the Raspberry Pi's and to make sure they all work properly.
- 
+4. Setup the Cluster Network:
+
 [Back to Top](#introduction)
 
 ## Master Node Tasks
