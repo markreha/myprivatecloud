@@ -11,7 +11,7 @@ Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
 ## Instructions
 Step | Task | Instructions | Text Instructions
 :--: | ---- | ------------ | -----------------
-1 | Setup the Hardware  | [IT Tasks](#it-tasks) | [Setup Raspberry Pi](https://github.com/markreha/myprivatecloud/blob/main/documentation/howto-guides/howto-setup-pi.txt)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Setup Cluster](https://github.com/markreha/myprivatecloud/blob/main/documentation/howto-guides/howto-setup-cluster.txt) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Setup Network](https://github.com/markreha/myprivatecloud/blob/main/documentation/howto-guides/howto-setup-network.txt)
+1 | Setup the Hardware  | [IT Tasks](#it-tasks) | [Setup Raspberry Pi](https://github.com/markreha/myprivatecloud/blob/main/documentation/howto-guides/howto-setup-pi.txt) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Setup Cluster](https://github.com/markreha/myprivatecloud/blob/main/documentation/howto-guides/howto-setup-cluster.txt) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Setup Network](https://github.com/markreha/myprivatecloud/blob/main/documentation/howto-guides/howto-setup-network.txt)
 2 | Setup the Master Node  | [Master Node Tasks](#master-node-tasks) | [Master Node Tasks](https://github.com/markreha/myprivatecloud/blob/main/documentation/howto-guides/howto-setup-master.txt)
 3 | Setup the Worker Nodes  | [Worker Node Tasks](#worker-node-tasks) | [Worker Node Tasks](https://github.com/markreha/myprivatecloud/blob/main/documentation/howto-guides/howto-setup-worker.txt)
 4 | Setup the Portal Application  | [Portal Application Tasks](#portal-application-tasks) | See below
