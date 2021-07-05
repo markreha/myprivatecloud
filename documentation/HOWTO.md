@@ -18,6 +18,9 @@ Step | Task | Instructions
 <br/>
 <br/>
 
+## Prerequisites
+1. TODO (links to Bash, Docker, Kubernetes, etc)
+
 ## IT Tasks
 1. Order the Equipment
 - 4 [Raspberry Pi 4 Model B with 4GB of RAM](https://www.amazon.com/gp/product/B07TVVJZQT/ref=ppx_yo_dt_b_asin_title_o01_s02?ie=UTF8&psc=1)
