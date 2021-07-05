@@ -19,7 +19,7 @@ Step | Task | Instructions
 <br/>
 
 ## Prerequisites
-1. TODO (links to Bash, Docker, Kubernetes, etc)
+1. TODO (links to Pi/Linux, Bash, Docker, Kubernetes, etc)
 
 ## IT Tasks
 1. Order the Equipment
