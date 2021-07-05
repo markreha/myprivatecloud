@@ -128,7 +128,7 @@ View the [JavaDoc](https://htmlpreview.github.io/?https://github.com/markreha/my
     </tr>
     <tr>
         <td align="center"><b>Lens - View All Pods</b><br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Lens3.png"/></td>
-        <td align="center"><b>Portal Users</b><br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Admin1.png"/></td>
+        <td align="center"><b>Manage Portal Users</b><br/><img src="https://github.com/markreha/myprivatecloud/blob/main/documentation/screenshots/Admin1.png"/></td>
     </tr>
 </table>
 
