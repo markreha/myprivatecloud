@@ -313,7 +313,7 @@ It should be noted that any variable that will be unique to your environment wil
 	```shell
 	# START: FROM YOUR LOCAL DEVELOPMENT PC
 	# !!! GET traefik-ingress.yaml FROM THE REFERENCE DESIGN DOCUMENTATION !!!
-	scp ./traefik-ingress.yaml pi@10.0.0.133:~/traefik-ingress.yaml
+	scp ./traefik-ingress.yaml pi@[MASTER NODE IP ADDRESS]:~/traefik-ingress.yaml
 	# END: FROM YOUR LOCAL DEVELOPMENT PC
 
     	# Master Node: Install Traefik Proxy
