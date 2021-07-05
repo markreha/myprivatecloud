@@ -37,7 +37,36 @@ You need to have moderate experience and skills in the following in order to com
 - 1 [Port Gigibit Ehternet Network Switch](https://www.amazon.com/gp/product/B000BCC0LO/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
 - 1 [500GB WD USB 3 SSD Drive](https://www.amazon.com/dp/B07VSPL8FJ?ref=ppx_pop_mob_ap_share)
 - 1 [Power Strip](https://www.amazon.com/dp/B091THXBFJ?ref=ppx_pop_mob_ap_share)
-2.
+2. Create the Pi Boot Image:
+    1. Insert your Micro SD card into your computer. 
+    2.	Download and install the Raspberry Pi Imager from [here](https://www.raspberrypi.org/downloads/).
+    3.	Run Raspberry Pi Imager application:
+      - Click the Choose OS button. Choose the Raspberry Pi OS option.
+      - Click the Choose SD Card button. Choose the SD Card from step 1.
+      - Click the Write button. This will copy the Raspberry Pi operating system to the SD Card. This will take several minutes to complete.
+     4.	Using any text editor create an empty text file named ssh (with no file extension) in the root of the directory (/boot) of the SD card. This will enable SSH on the Raspberry Pi.
+    5.	Configure Wi-Fi by using any text editor and create a text file named wpa_supplicant.conf in the root of the directory (/boot) of the SD card. Enter the following content and replace your Wi-Fi SSID and Password (these must be entered with the double quotes).
+		```
+        ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+		update_config=1
+		country=US
+		network={
+			scan_ssid=1
+			ssid=[YOUR SSID]
+			psk=[YOUR PASSWORD]
+			key_mgmt=WPA-PSK
+		}
+        ```
+    6.	Open the file "config.txt" located in the root of the directory (/boot) of the SD card using any text editor. Remove the "#" in front of the line "hdmi_force_hotplug=1". Save the file.
+    7.	Unmount the SD card, place the SD card carefully in the Raspberry Pi, and power up the Raspberry Pi.
+    8.	Find the IP address of the Raspberry Pi on your Wi-Fi network
+    9.	Enable VNC and GUI Desktop (both are optional):
+	  - Open a Terminal window
+	  - SSH into your Raspberry Pi by using the following command and enter raspberry for the password when prompted: ssh pi@[PI IP ADDRESS] 
+	  - Enable the VNC Interface by running the following command: sudo raspi-config
+			Select the Interfacing Options menu option, select the VNC menu option, tab to the Yes option, select the Yes option when prompted, select the OK option and enter the return key.
+	  - Enable the Desktop GUI by running the following command: sudo raspi-config
+			Select the Boot Options menu option, select the Desktop /CLI menu option, select the Desktop Autologin menu option, tab to the Finish option and enter the return key, select Reboot when prompted.
 3.
 4. Assemble the Cluster:
 - TODO
