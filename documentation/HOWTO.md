@@ -19,7 +19,13 @@ Step | Task | Instructions
 <br/>
 
 ## Prerequisites
-1. TODO (links to Pi/Linux, Networks, Bash, Docker, Kubernetes, etc)
+You need to have moderate experience and skills in the following in order to complete many of the tasks:
+1. [Raspberry Pi](https://www.raspberrypi.org)
+2. [Linux](https://www.linux.org)
+3. [Networks](https://www.geeksforgeeks.org/computer-network-tutorials/)
+4. [Bash Shell Scripting](https://ryanstutorials.net/bash-scripting-tutorial/)
+5. [Docker](https://www.docker.com)
+6. [Kubernetes](https://kubernetes.io)
 
 ## IT Tasks
 1. Order the Equipment
