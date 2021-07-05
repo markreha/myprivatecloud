@@ -10,7 +10,7 @@ Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
 
 ## Instructions
 Step | Task | Instructions | Text Instructions
-:--: | ---- | ------------
+:--: | ---- | ------------ | -----------------
 1 | Setup the Hardware  | [IT Tasks](#it-tasks) | [Setup Raspberry Pi](https://github.com/markreha/myprivatecloud/blob/main/documentation/howto-guides/howto-setup-pi.txt)
 [Setup Cluster](https://github.com/markreha/myprivatecloud/blob/main/documentation/howto-guides/howto-setup-cluster.txt)
 [Setup Network](https://github.com/markreha/myprivatecloud/blob/main/documentation/howto-guides/howto-setup-network.txt)
