@@ -69,6 +69,18 @@ You need to have moderate experience and skills in the following in order to com
 			Select the Boot Options menu option, select the Desktop /CLI menu option, select the Desktop Autologin menu option, tab to the Finish option and enter the return key, select Reboot when prompted.
 	10. Power up the Raspberry Pi and use VNC Viewer from [here](https://www.realvnc.com/en/connect/download/viewer/)) to access the Raspberry Pi and to make sure boot image works.
 3. Assemble the Cluster:
+	1. Attach the Raspberry Pi heat sinks per the vendor instructions.
+	2. Attach the Raspberry Pi fan per the vendor instructions.
+	3. Label each of Raspberry Pi's: M1 for Master Node, N1 for Worker Node 1, N2 for Worker Node 2, and N3 for Worker Node 3.
+	4. Mount the Master Node to the 1st Layer of the Dog Bone Cluster per the vendor instructions.
+	5. Mount the Worker Node 1 to the 2nd Layer of the Dog Bone Cluster per the vendor instructions. Mount the Raspberry Pi fan for the Master Node to the side of the enclosure.
+	6. Mount the Worker Node 2 to the 3rd Layer of the Dog Bone Cluster per the vendor instructions. Mount the Raspberry Pi fan for the Worker Node 1 to the side of the enclosure.
+	7. Mount the Worker Node 3 to the 4th Layer of the Dog Bone Cluster per the vendor instructions. Mount the Raspberry Pi fan for the Worker Node 2 and Worker Node 3 to the side of the enclosure.
+	8. Plug the Power Strip into the wall and make sure the power is turned off.
+	9. Plug each of the Raspberry Pi's power adapters into the Power Strip and then plug in each connector of the power adaptor into the Raspberry Pi.
+	10. Plug an Ethernet Cable into each of the Raspberry Pi and a port on the Ethernet Network Switch. Power on the Ethernet Network Switch.
+	11. Turn the power on the Power Strip.
+	12. Use VNC Viewer (from https://www.realvnc.com/en/connect/download/viewer/) to access each of the Raspberry Pi's and to make sure they all work properly.
  
 [Back to Top](#introduction)
 
