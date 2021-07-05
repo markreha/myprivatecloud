@@ -80,7 +80,7 @@ You need to have moderate experience and skills in the following in order to com
 	9. Plug each of the Raspberry Pi's power adapters into the Power Strip and then plug in each connector of the power adaptor into the Raspberry Pi.
 	10. Plug an Ethernet Cable into each of the Raspberry Pi and a port on the Ethernet Network Switch. Power on the Ethernet Network Switch.
 	11. Turn the power on the Power Strip.
-	12. Use VNC Viewer (from https://www.realvnc.com/en/connect/download/viewer/) to access each of the Raspberry Pi's and to make sure they all work properly.
+	12. Use VNC Viewer to access each of the Raspberry Pi's and to make sure they all work properly.
  
 [Back to Top](#introduction)
 
