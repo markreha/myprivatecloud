@@ -30,8 +30,8 @@ Show me how to build [My Own Private Cloud](https://github.com/markreha/myprivat
 
 ## Features
 - Test 1
- - Test 2
-  - Test 3
+        - Test 2
+                - Test 3
 - Fully functioning Private Cloud:
     - Capable of running any number of Web Servers, common Web Stacks, Databases, and Tools. Examples include:
     - Web Servers: Nginx and Apache
