@@ -47,8 +47,8 @@ Show me how to build [My Own Private Cloud](https://github.com/markreha/myprivat
     - You can add a new Worker Node in less then an hour and that will only cost about $75
 - Portal Application is easily extendable:
     - New Stacks can be easily added to the Catalog
-    - You can add a new Stack with a database entry and this can be done in less than an hour
-    - You can leverage your own custom Docker Images that have been pushed to Docker Hub
+    - You can add a new Stack with simple Portal database update and this can be done in just minutes
+    - You can leverage your own custom Docker Images that you pushed to your Docker Hub repository
     - Communication with Kubernetes via a custom Java Cluster API that leverages the Fabric8 library
 - Portal Application is easy to use:
     - Go to the Register menu and register for your own account
