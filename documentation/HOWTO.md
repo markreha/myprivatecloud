@@ -143,8 +143,201 @@ It should be noted that any variable that will be unique to your environment wil
 [Back to Top](#introduction)
 
 ## Master Node Tasks
-TODO
+1. Open a Terminal Window on your development and SSH (enter ssh pi@[PI IP ADDRESS]) into the Raspberry Pi.
+2. Install Docker by running the following commands:
+	```shell
+	# Install Docker
+	sudo apt-get update
+	sudo apt-get upgrade -y
+	sudo apt-get install docker.io
+	
+	# Configure Docker
+	sudo usermod -aG docker $USER
+	sudo systemctl start docker
+	sudo systemctl enable docker
 
+	# Reboot
+	sudo reboot
+	
+	# Testing
+	docker version
+	```
+3. Install Kubernetes by running the following commands:
+	```shell
+	# Disable Swap
+	echo Adding " Disabling Swap File
+	sudo dphys-swapfile swapoff && \
+	sudo dphys-swapfile uninstall && \
+	sudo update-rc.d dphys-swapfile remove
+	
+	# Edit the following file and set CONF_SWAPSIZE=0 
+	sudo nano /etc/dphys-swapfile
+
+	# Setup CGroups
+	echo Adding " cgroup_enable=cpuset cgroup_enable=memory" to /boot/cmdline.txt
+	sudo cp /boot/cmdline.txt /boot/cmdline_backup.txt
+	orig="$(head -n1 /boot/cmdline.txt) cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory"
+	echo $orig | sudo tee /boot/cmdline.txt
+	
+	# Reboot
+	sudo reboot
+
+	# Install Kubernetes
+	# Install Kubernetes (if curl is not installed run the following command: sudo apt-get install curl)
+	sudo apt-get install software-properties-common
+	curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+	echo "deb http://packages.cloud.google.com/apt/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list 
+	sudo apt-get update -q
+	sudo apt-get install kubeadm kubelet kubectl -y
+
+	# Reboot
+	sudo reboot
+	```
+4. Setup Kubernetes by running the following commands:
+	```shell
+	# Init network only on MASTER 
+ 	sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+	
+	# Setup Master Node configuration only on MASTER
+	mkdir -p $HOME/.kube
+	sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+	sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+	# Install Flannel only on MASTER
+	kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
+	# Testing (make sure the Master is in a Ready status)
+	kubectl version
+	kubectl get nodes
+	```
+5. Setup Samba by running the following commands:
+	```shell
+	# Install Samba
+	sudo apt update
+	sudo apt install samba
+	
+	# Reboot
+	sudo reboot
+
+	# Test
+	whereis samba
+	
+	# Master Node Only: Setup Samba Share
+	sudo nano /etc/samba/smb.conf
+		[share]
+		comment = Samba on Ubuntu
+		path = /media/pi/CLUSTERDATA/shared
+		read only = no
+		browsable = yes
+		writeable = yes
+		create mask = 0777
+		directory mask = 0777
+		force directory mode = 2777
+		public = yes
+		guest ok = no
+		
+    	# Master Node Only: Final Configuration and set the password on share to clusterdata for the user pi
+    	sudo smbpasswd -a pi
+    	sudo service smbd restart
+	```
+6. Setup Kubernetes CIFS Driver by running the following commands:
+	```shell
+	# NOTE: See https://github.com/fstab/cifs
+	# NOTE: See https://www.programmersought.com/article/25171844047/
+	# NOTE: Create base64 encoded Samba share username (pi) and passwrod (clusterdata)
+	echo -n pi | base64
+	echo -n clusterdata | base64
+
+	# START: FROM YOUR LOCAL DEVELOPMENT PC
+	# !!! GET cifs-secret.yaml FROM THE REFERENCE DESIGN DOCUMENTATION !!!
+	#  Edit the cifs-secret.yaml with the base 64 encoded username from the above command
+	#  Edit the cifs-secret.yaml with the base 64 encoded password from the above command
+	# Master Node: Create Kubernetes secrets for CIFS username and password on Master and all Worker Nodes
+	scp ./cifs-secret.yaml pi@[MASTER NODE IP ADDRESS]:~/cifs-secret.yaml
+	# END: FROM YOUR LOCAL DEVELOPMENT PC	
+	
+	# Master Node: Create Kubernetes secrets for CIFS username and password on Master and all Worker Nodes
+	kubectl apply -f cifs-secret.yaml
+
+	# Install CIFS Kubernetes Driver dependencies on Master and all Worker Nodes
+	sudo apt-get install jq
+
+	# Install CIFS Kubernetes Driver on Master and all Worker Nodes (also see the YAML code in the cifs-master.zip file in the Reference Design Documentation)
+	#  NOTE: This will create a mount point network-pv-volume at /usr/libexec/kubernetes/kubelet-plugins/volume/exec/fstab~cifs
+	#        If for some reason the mount gets "stuck" then SSH into Pod, sudo su, and then cd to the directory and umount network-pv-volume
+	sudo mkdir -p /usr/libexec/kubernetes/kubelet-plugins/volume/exec/fstab~cifs
+	cd /usr/libexec/kubernetes/kubelet-plugins/volume/exec/fstab~cifs
+	sudo curl -L -O https://raw.githubusercontent.com/fstab/cifs/master/cifs
+	sudo chmod 755 cifs
+
+	# Test
+	/usr/libexec/kubernetes/kubelet-plugins/volume/exec/fstab~cifs/cifs init
+	```
+7. Setup Kubernetes Persistent Volumes by running the following commands:
+	```shell
+	# NOTE: there will be 2 PV's defined 
+	#	1) local storage to SD Card with a max of 20Gb
+	#	2) network storage to Samba Share on USB 3 drive with a max of 1.5Tb
+	
+	# START: FROM YOUR LOCAL DEVELOPMENT PC
+	# !!! GET local-pv-volume.yaml FROM THE REFERENCE DESIGN DOCUMENTATION !!!
+	# !!! GET local-pv-claims.yaml FROM THE REFERENCE DESIGN DOCUMENTATION !!!
+	scp ./local-pv-volume.yaml pi@[MASTER NODE IP ADDRESS]:~/local-pv-volume.yaml
+	scp ./local-pv-claims.yaml pi@[MASTER NODE IP ADDRESS]:~/local-pv-claims.yaml
+	# END: FROM YOUR LOCAL DEVELOPMENT PC
+		
+	# Master Node: install Local Persistent Volume Claims
+	kubectl apply -f ./local-pv-volume.yaml
+	kubectl apply -f ./local-pv-claims.yaml
+	
+	# Master Node: Test
+	kubectl get pv
+	kubectl get pvc
+	 
+	# START: FROM YOUR LOCAL DEVELOPMENT PC
+	# !!! GET network-pv-volume.yaml FROM THE REFERENCE DESIGN DOCUMENTATION !!!
+	# !!! GET network-pv-claims.yaml FROM THE REFERENCE DESIGN DOCUMENTATION !!!
+	scp ./network-pv-volume.yaml pi@[MASTER NODE IP ADDRESS]:~/network-pv-volume.yaml
+	scp ./network-pv-claims.yaml pi@[MASTER NODE IP ADDRESS]:~/network-pv-claims.yaml
+	# END: FROM YOUR LOCAL DEVELOPMENT PC
+
+	# Master Node: install Network Persistent Volume Claims
+	kubectl apply -f ./network-pv-volume.yaml
+	kubectl apply -f ./network-pv-claims.yaml
+	
+	# Master Node: Test
+	kubectl get pv
+	kubectl get pvc
+	```
+8. Setup Traefik Proxy by running the following commands:
+	```shell
+	# START: FROM YOUR LOCAL DEVELOPMENT PC
+	# !!! GET traefik-ingress.yaml FROM THE REFERENCE DESIGN DOCUMENTATION !!!
+	scp ./traefik-ingress.yaml pi@10.0.0.133:~/traefik-ingress.yaml
+	# END: FROM YOUR LOCAL DEVELOPMENT PC
+
+    	# Master Node: Install Traefik Proxy
+    	kubectl apply -f traefik-ingress.yaml
+
+	# Master Node: Test (make sure deployment.apps/traefik-ingress-controller and service/traefik-ingress-service are running)
+	kubectl get all --all-namespaces	
+	```
+9. Setup Scheduled Jobs by running the following commands:
+	```shell
+	# START: FROM YOUR LOCAL DEVELOPMENT PC
+	# !!! GET cleanup.sh FROM THE REFERENCE DESIGN DOCUMENTATION !!!
+	scp ./cleanup.sh pi@[MASTER NODE IP ADDRESS]:~/cleanup.sh	
+	# END: FROM YOUR LOCAL DEVELOPMENT PC
+	
+	# Make sure script is executable
+	chmod 755 ~/cleanup,sh
+	
+	# Setup the Cronjob to run at midnight
+	#  Master Node: DIR TO CLEANUP should be /media/pi/CLUSTERDATA/shared
+	#  Worker Node: DIR TO CLEANUP should be /cloudapps/local
+	crontab -e
+	00 00 * * * /home/pi/cleanup.sh [DIR TO CLEANUP] 0 >> /home/pi/cleanup.log 2>&1
+	```
 [Back to Top](#introduction)
 
 ## Worker Node Tasks
