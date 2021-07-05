@@ -28,7 +28,7 @@ You need to have moderate experience and skills in the following in order to com
 6. [Kubernetes](https://kubernetes.io)
 
 ## IT Tasks
-It should be noted that any variable that will be unique to your environment will be noted in the instructions in brackets with the name of variable (i.e. [YOUR IP ADDRESS]).
+It should be noted that any variable that will be unique to your environment will be noted in the instructions in brackets with the name of variable in capital letters (i.e. [YOUR UNIQUE VARIABLE]).
 1. Order the Equipment
 - 4 [Raspberry Pi 4 Model B with 4GB of RAM](https://www.amazon.com/gp/product/B07TVVJZQT/ref=ppx_yo_dt_b_asin_title_o01_s02?ie=UTF8&psc=1)
 - 4 [Raspberry Pi 4 32Gb SD Cards](https://www.amazon.com/gp/product/B06XWN9Q99/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
