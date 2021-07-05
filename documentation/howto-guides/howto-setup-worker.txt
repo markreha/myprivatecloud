@@ -1,0 +1,99 @@
+Perform the following on each of the Worker Nodes.
+1. Open a Terminal Window on your development and SSH (enter ssh pi@[PI IP ADDRESS]) into the Raspberry Pi.
+2. Install Docker by running the following commands:
+	# Install Docker
+	sudo apt-get update
+	sudo apt-get upgrade -y
+	sudo apt-get install docker.io
+	
+	# Configure Docker
+	sudo usermod -aG docker $USER
+	sudo systemctl start docker
+	sudo systemctl enable docker
+
+	# Reboot
+	sudo reboot
+	
+	# Testing
+	docker version
+3. Install Kubernetes by running the following commands:
+	# Disable Swap
+	echo Adding " Disabling Swap File
+	sudo dphys-swapfile swapoff && \
+	sudo dphys-swapfile uninstall && \
+	sudo update-rc.d dphys-swapfile remove
+	
+	# Edit the following file and set CONF_SWAPSIZE=0 
+	sudo nano /etc/dphys-swapfile
+
+	# Setup CGroups
+	echo Adding " cgroup_enable=cpuset cgroup_enable=memory" to /boot/cmdline.txt
+	sudo cp /boot/cmdline.txt /boot/cmdline_backup.txt
+	orig="$(head -n1 /boot/cmdline.txt) cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory"
+	echo $orig | sudo tee /boot/cmdline.txt
+	
+	# Reboot
+	sudo reboot
+
+	# Install Kubernetes
+	# Install Kubernetes (if curl is not installed run the following command: sudo apt-get install curl)
+	sudo apt-get install software-properties-common
+	curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+	echo "deb http://packages.cloud.google.com/apt/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list 
+	sudo apt-get update -q
+	sudo apt-get install kubeadm kubelet kubectl -y
+
+	# Reboot
+	sudo reboot
+4. Setup Kubernetes by running the following commands:
+	# Worker Testing (ignore 'The connection to the server localhost:8080 was refused' issue connecting to the Master Node to get its version)
+	kubectl version
+
+	# For each Worker Node create a Token and copy it as a bash script to the from the Master Node to the Worker Node
+	# START FROM THE MASTER NODE
+	# Create a Join Token and save in a file then scp over to Worker Node (get Node 1 IP address by running ip add)
+	kubeadm token create --print-join-command --ttl=0 > token.sh
+	scp ./token.sh pi@[WORKER NODE IP ADDRESS]:~/token.sh
+	# END FROM THE MASTER NODE
+
+	# START FROM THE WORKER NODE
+	# Setup Worker Node to join the Master
+	nano token.sh
+	chmod 777 token.sh
+	sudo ./token.sh
+	# END FROM THE WORKER NODE
+	
+	# Master Node Testing to make sure all Worker Nodes are working
+	kubectl get all --all-namespaces
+5. Setup Samba by running the following commands:
+	# Install Samba
+	sudo apt update
+	sudo apt install samba
+	
+	# Reboot
+	sudo reboot
+
+	# Test
+	whereis samba
+7. Setup Kubernetes Persistent Volumes by running the following commands:
+	# NOTE: there will be 2 PV's defined 
+	#	1) local storage to SD Card with a max of 20Gb
+	#	2) network storage to Samba Share on USB 3 drive with a max of 1.5Tb
+	
+	# Worker Node: create /cloudapps/local directory on all Worker Nodes and make this accessible to everybody to read and write
+	sudo mkdir /cloudapps
+	sudo chmod 777 /cloudapps
+	sudo mkdir /cloudapps/local
+	sudo chmod 777 /cloudapps/local
+8. Setup Scheduled Jobs by running the following commands:
+	# START: FROM YOUR LOCAL DEVELOPMENT PC
+	# !!! GET cleanup.sh FROM THE REFERENCE DESIGN DOCUMENTATION !!!
+	scp ./cleanup.sh pi@[MASTER NODE IP ADDRESS]:~/cleanup.sh	
+	# END: FROM YOUR LOCAL DEVELOPMENT PC
+	
+	# Make sure script is executable
+	chmod 755 ~/cleanup,sh
+	
+	# Setup the Cronjob to run at midnight
+	crontab -e
+	00 00 * * * /home/pi/cleanup.sh /cloudapps/local 0 >> /home/pi/cleanup.log 2>&1

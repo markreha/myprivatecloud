@@ -1,0 +1,53 @@
+1. Open a Terminal Window on your development and SSH (enter ssh pi@[PI IP ADDRESS]) into the Raspberry Pi.
+2. Edit the hosts file in each Raspberry Pi per the following requirements:
+	# Master Node
+	sudo nano /etc/hosts
+	10.244.100.10   master-node
+	
+	# Worker Node 1
+	sudo nano /etc/hosts
+	10.244.100.11   worker-node1
+
+	# Worker Node 2
+	sudo nano /etc/hosts
+	10.244.100.12   worker-mode2
+
+	# Worker Node 3
+	sudo nano /etc/hosts
+	10.244.100.13   worker-node3
+3. Edit the DHCP configuration file in each Raspberry Pi per the following requirements:
+	# Master Node
+	sudo nano /etc/dhcpcd.conf
+		interface eth0
+		static ip_address=10.244.100.10/24
+	sudo hostnamectl --transient set-hostname ${hostname}
+	sudo hostnamectl --static set-hostname ${hostname}
+	sudo hostnamectl --pretty set-hostname ${hostname}
+	sudo reboot
+
+	# Worker Node 1
+	sudo nano /etc/dhcpcd.conf
+		interface eth0
+		static ip_address=10.244.100.11/24
+	sudo hostnamectl --transient set-hostname ${hostname}
+	sudo hostnamectl --static set-hostname ${hostname}
+	sudo hostnamectl --pretty set-hostname ${hostname}
+	sudo reboot
+	
+	# Worker Node 2
+	sudo nano /etc/dhcpcd.conf
+		interface eth0
+		static ip_address=10.244.100.12/24
+	sudo hostnamectl --transient set-hostname ${hostname}
+	sudo hostnamectl --static set-hostname ${hostname}
+	sudo hostnamectl --pretty set-hostname ${hostname}
+	sudo reboot
+
+	# Worker Node 3
+	sudo nano /etc/dhcpcd.conf
+		interface eth0
+		static ip_address=10.244.100.13/24
+	sudo hostnamectl --transient set-hostname ${hostname}
+	sudo hostnamectl --static set-hostname ${hostname}
+	sudo hostnamectl --pretty set-hostname ${hostname}
+	sudo reboot
