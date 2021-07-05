@@ -18,6 +18,7 @@ This repository contains the design, code, and documentation for the My Private 
 
 Feel free to use this Reference Design to get started building your own Private Cloud!
 <br/>
+<br/>
 Show me how to build [My Own Private Cloud](https://github.com/markreha/myprivatecloud/blob/main/documentation/howto-guides/HOWTO.md).
 <br/>
 <table>
