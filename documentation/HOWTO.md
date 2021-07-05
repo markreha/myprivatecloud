@@ -47,7 +47,7 @@ It should be noted that any variable that will be unique to your environment wil
       	- Click the Write button. This will copy the Raspberry Pi operating system to the SD Card. This will take several minutes to complete.
 	4. Using any text editor create an empty text file named ssh (with no file extension) in the root of the directory (/boot) of the SD card. This will enable SSH on the Raspberry Pi.
     	5. Configure Wi-Fi by using any text editor and create a text file named wpa_supplicant.conf in the root of the directory (/boot) of the SD card. Enter the following content and replace your Wi-Fi SSID and Password (these must be entered with the double quotes).
-		```
+	```
         ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 		update_config=1
 		country=US
@@ -83,6 +83,61 @@ It should be noted that any variable that will be unique to your environment wil
 	11. Turn the power on the Power Strip.
 	12. Use VNC Viewer to access each of the Raspberry Pi's and to make sure they all work properly.
 4. Setup the Cluster Network:
+	1. Open a Terminal Window on your development and SSH (enter ssh pi@[PI IP ADDRESS]) into the Raspberry Pi.
+	2. Edit the hosts file in each Raspberry Pi per the following requirements:
+	```
+	# Master Node
+	sudo nano /etc/hosts
+	10.244.100.10   master-node
+	
+	# Worker Node 1
+	sudo nano /etc/hosts
+	10.244.100.11   worker-node1
+
+	# Worker Node 2
+	sudo nano /etc/hosts
+	10.244.100.12   worker-mode2
+
+	# Worker Node 3
+	sudo nano /etc/hosts
+	10.244.100.13   worker-node3
+	3. Edit the DHCP configuration file in each Raspberry Pi per the following requirements:
+	# Master Node
+	sudo nano /etc/dhcpcd.conf
+		interface eth0
+		static ip_address=10.244.100.10/24
+	sudo hostnamectl --transient set-hostname ${hostname}
+	sudo hostnamectl --static set-hostname ${hostname}
+	sudo hostnamectl --pretty set-hostname ${hostname}
+	sudo reboot
+
+	# Worker Node 1
+	sudo nano /etc/dhcpcd.conf
+		interface eth0
+		static ip_address=10.244.100.11/24
+	sudo hostnamectl --transient set-hostname ${hostname}
+	sudo hostnamectl --static set-hostname ${hostname}
+	sudo hostnamectl --pretty set-hostname ${hostname}
+	sudo reboot
+	
+	# Worker Node 2
+	sudo nano /etc/dhcpcd.conf
+		interface eth0
+		static ip_address=10.244.100.12/24
+	sudo hostnamectl --transient set-hostname ${hostname}
+	sudo hostnamectl --static set-hostname ${hostname}
+	sudo hostnamectl --pretty set-hostname ${hostname}
+	sudo reboot
+
+	# Worker Node 3
+	sudo nano /etc/dhcpcd.conf
+		interface eth0
+		static ip_address=10.244.100.13/24
+	sudo hostnamectl --transient set-hostname ${hostname}
+	sudo hostnamectl --static set-hostname ${hostname}
+	sudo hostnamectl --pretty set-hostname ${hostname}
+	sudo reboot
+	```
 
 [Back to Top](#introduction)
 
