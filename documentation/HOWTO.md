@@ -37,8 +37,8 @@ You need to have moderate experience and skills in the following in order to com
 - 1 [Port Gigibit Ehternet Network Switch](https://www.amazon.com/gp/product/B000BCC0LO/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
 - 1 [500GB WD USB 3 SSD Drive](https://www.amazon.com/dp/B07VSPL8FJ?ref=ppx_pop_mob_ap_share)
 - 1 [Power Strip](https://www.amazon.com/dp/B091THXBFJ?ref=ppx_pop_mob_ap_share)
-2. Test
-- [ ] Stuff to do
+2.
+3.
 4. Assemble the Cluster:
 - TODO
 - 
