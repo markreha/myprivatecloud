@@ -85,7 +85,7 @@ It should be noted that any variable that will be unique to your environment wil
 4. Setup the Cluster Network:
 	1. Open a Terminal Window on your development and SSH (enter ssh pi@[PI IP ADDRESS]) into the Raspberry Pi.
 	2. Edit the hosts file in each Raspberry Pi per the following requirements:
-	```
+	```shell
 	# Master Node
 	sudo nano /etc/hosts
 	10.244.100.10   master-node
