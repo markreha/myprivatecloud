@@ -10,28 +10,29 @@ Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
 
 ## Using the Portal Application
 1. Registration and Logging In:
-  - First you will need to register a new User. This can be done by clicking the Register menu from the Main menu. Complete the Registration Form and click the Register button. It should be noted that the Username must be unique across all Portal Users. If you need Portal Administration functionality you will need update the USERS table in the Portal Database and update the ADMIN column to a value of 1.
-  - To log, click the Log In menu from the Main menu, enter the Username and Password you entered during Registration, and click the the Log In button. Once you are logged in the Catalog will be displayed.
-3. Creating an Application:
-  - You can create an Application by selecting the Catalog manu from the Main menu. The Catalog is divided into difference kinds of Stacks.
+  - First you will need to register as a new User. This can be done by clicking the Register menu from the Main menu. Complete the Registration Form and click the Register button. It should be noted that the Username must be unique across all Portal Users. If you need Portal Administration functionality you will to need update the USERS table in the Portal Database and update the ADMIN column to a value of 1.
+  - To log in, click the Log In menu from the Main menu, enter the Username and Password you entered during Registration, and click the Log In button. Once you are logged in the Catalog page will be displayed.
+2. Creating an Application:
+  - You can create an Application by selecting the Catalog manu from the Main menu. The Catalog is divided into different categories of Stacks.
     - Web Servers: select this to run basic static web sites.
     - Web App Servers: select this to run dynamic web application in Spring, Spring Boot, PHP, or PHP Laravel.
     - Database Servers: select this to create a relation or non relational database for your dynamic web application.
-    - Tools: select this to create various tools, usch as a web based IDE.
-  - Once you have selected your Stack click the Configure button, give your Application a Name, select the CPU and RAM configuration, and click the Provision button. After 10-15 seconds the Stack will be created for you and the My Apps will be displayed. You should carefully select the amount of CPU and RAM for your Application because these are both limited resources in My Private Cloud.
-5. Deploying Code and Running an Application:
+    - Tools: select this to create various tools, such as a web based IDE.
+  - Once you have selected your Stack, click the Configure button, give your Application a Name, select the CPU and RAM configuration, and click the Provision button. After 10-15 seconds the Stack will be created for you and the My Apps page will be displayed. You should carefully select the amount of CPU and RAM for your Application because these are both limited resources in My Private Cloud.
+3. Deploying Code and Running an Application:
   - You can see all of your Applications by clicking the My Apps menu from the Main menu.
-  - To run your Application just click the Go button. A default index page is deployed for an Application when it is provisioned.
+  - To run your Application just click the Go button. A default page is deployed for an Application when it is provisioned.
   - To see the details, such as the CPU and RAM, ports, or Environment Variables, of your Application just click the Details button.
-  - To deploy code, you will first need to compress all your application in Tar Gz format (i.e. a Tarball). This can be done by creating a folder for all of your application code, copying all the code to this folder, and running the following command from a Terminal Window. You can then click the Deploy button, select the Tar Gz file, and click the Deploy button. This will take a couple of minutes to complete. Your new Application can be run by clicking the Go button.  
+  - To deploy code, you will first need to compress all your application code in Tar Gz format (i.e. a Tarball). This can be done by creating a folder for all of your application code, copying all the code to this folder, and running the following command from a Terminal Window. You can then click the Deploy button, select the Tar Gz file, and click the Deploy button. This will take a couple of minutes to complete. Your new Application can be run by clicking the Go button.  
     - OSX: COPYFILE_DISABLE=1 tar -pczvf deploy.tar.gz .
     - Windows: tar -pczvf deploy.tar.gz .
-7. Deleting an Application:
+4. Deleting an Application:
   - You can see all of your Applications by clicking the My Apps menu from the Main menu.
   - To delete your Application just click the Delete button. You will be prompted and you can proceed with the deletion by clicking the Yes button.
-9. Database Administration:
-  - The databases in the Reference Design are pretty much provisioned with the default root username and passwords. Some databases have been customized using standard Docker Image Environment Variables. These can be found by displaying the Details for an Application. The IP Address and Port can also be found in the Details of the Application. You can use a SQL Client, such as MySQL Workbench, DBeaver, or MongoDB Compass, to access your database as the root user. From there you can execute desired DDL scripts and create additional database users for your Applications.
-11. Administration:
+5. Database Administration:
+  - The databases in the Reference Design are pretty much provisioned with the default root username and password. Some databases have been customized using standard Docker Image Environment Variables. These can be found by displaying the Details for an Application. The IP Address and Port can also be found in the Details of the Application. You can use a SQL Client, such as MySQL Workbench, DBeaver, or MongoDB Compass, to access your database as the root user. From there you can execute desired DDL scripts and create additional database users for your Applications.
+6. Administration:
+  - You can access Administration features by clicking the Admin menu from the Main menu. This will only be visible for users with Administrative privileges.
   - The Portal Administration features are limited at this point. Currently, if you have Administrative access, you will be able to see all of the Portal Users, and if desired Supend or Activate them.
 
 [Back to Top](#introduction)
