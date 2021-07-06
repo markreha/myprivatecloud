@@ -30,7 +30,7 @@ Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
   - You can see all of your Applications by clicking the My Apps menu from the Main menu.
   - To delete your Application just click the Delete button. You will be prompted and you can proceed with the deletion by clicking the Yes button.
 9. Database Administration:
-  - The databases in the Reference Design are pretty much provisioned with default the root username and passwords. Some databases have been customized using standard Docker Image Environment Variables. These can be found by displaying the Details for an Application. The IP Address and Port can also be found in the Details of the Application. You can use a SQL Client, such as MySQL Workbench, DBeaver, or MongoDB Compass, to access your database as the root user. From there you can execute desired DDL scripts and create additional database users.
+  - The databases in the Reference Design are pretty much provisioned with the default root username and passwords. Some databases have been customized using standard Docker Image Environment Variables. These can be found by displaying the Details for an Application. The IP Address and Port can also be found in the Details of the Application. You can use a SQL Client, such as MySQL Workbench, DBeaver, or MongoDB Compass, to access your database as the root user. From there you can execute desired DDL scripts and create additional database users for your Applications.
 11. Administration:
   - The Portal Administration features are limited at this point. Currently, if you have Administrative access, you will be able to see all of the Portal Users, and if desired Supend or Activate them.
 
