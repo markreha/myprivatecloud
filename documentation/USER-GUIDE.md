@@ -2,7 +2,7 @@
 <h3 align="center"><i> How to build a Private Cloud for less then $500 that will fit in a Shoe Box</i></h3>
 
 #### Introduction
-This page will outline a few things you will need to know to run the Portal Application or extend the My Private Cloud Reference Design.
+This page will outline a few things you will need to know to run the Portal Application or extend the My Private Cloud Reference Design to use additional Stacks.
 
 Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
 <br/>
