@@ -75,6 +75,7 @@ Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
   - Portal: Tail or real-time log Window (for now use Lens)
   - Portal: Interactive Console Window (for now use Lens)
  	- Portal: Enable Replicas by adding option to Configuration options
+ 	- System: Update Raspbian OS to the 64-bit version (at this time it was only GA available as a 32-bit OS) as this would improve the number of Docker Images
   - System: Disable Desktop UI on all Worker Nodes
   - System: Get DNS working
 
