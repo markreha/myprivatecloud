@@ -8,7 +8,7 @@ Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
 <br/>
 <br/>
 
-## Using the Portal
+## Using the Portal Application
 1. Registration and Logging In:
   - First you will need to register a new User. This can be done by clicking the Register menu from the Main menu. Complete the Registration Form and click the Register button. It should be noted that the Username must be unique across all Portal Users. If you need Portal Administration functionality you will need update the USERS table in the Portal Database and update the ADMIN column to a value of 1.
   - To log, click the Log In menu from the Main menu, enter the Username and Password you entered during Registration, and click the the Log In button. Once you are logged in the Catalog will be displayed.
