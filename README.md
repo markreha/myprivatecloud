@@ -20,6 +20,8 @@ Feel free to use this Reference Design to get started building your own Private 
 <br/>
 Show me how to build [My Own Private Cloud](https://github.com/markreha/myprivatecloud/blob/main/documentation/howto-guides/HOWTO.md).
 <br/>
+You can find the User Guide [here](https://github.com/markreha/myprivatecloud/blob/main/documentation/USER-GUIDE.md).
+<br/>
 <br/>
 <table>
     <tr>
