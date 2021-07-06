@@ -37,7 +37,25 @@ Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
 [Back to Top](#introduction)
 
 ## Extending My Private Cloud
-
+  - The Reference Design can be extended by adding new Stacks to the Catalog. This can be done by adding new a database entry to the STACKS table in the Portal Database. You can also customize Environment Variables for a Docker Image by database entries to the EN_VARIABLES table. You can use the Test Application, which is a Java Console Application, found in the code of this repository to explore and play with new Stacks and Docker Images before adding them to the Portal Database. 
+  - The following are specifications for the STACKS table:
+    - ID: this is the auto generated PK (do not enter a value)
+    - SHORT_NAME: short name with no spaces (this is used directory names and internal application ID generation)
+    - LONG_NAME: long name that is a single sentance (displayed on the Stack Card)
+    - DESCRIPTION: description that is 2-3 sentances (displayed on the Stack Card)
+    - IMAGE: binary image file contents that should be 300x300 transparent gif or jpeg (displayed on the Stack Card)
+    - DOCKER_IMAGE: Docker Image name from Docker Hub (you can also publish your own public Docker Images in your public repository)
+    - POD_PATH: the Docker Image Volume that will be mounted on the Local or Network Storage in the Cloud
+    - CATEGORY: set to web, webapp, database, or tool (aligns with the Catalog Tabs)
+    - TARGET_PORT: Docker Image internal port
+    - PUBLISH_PORT: Dokcer Image external port
+    - CAN_DEPLOY_CODE: set to 1 to enable Code Tar Gz deployments (should be set to 0 for databases and tools, disables Traefik Proxy and uses Node Port)
+    - PV_CLAIM_FK: set to 1 to deploy to Local Storage (Raspberry Pi SD Card) else set to 2 to deploy to Network Storage (USB 3 SD Drive)
+  - The following are the specifications for the ENV_VARIABLES table:
+    - ID: this is the auto generated PK (do not enter a value)
+    - STACK_FK: Primary Key ID to the Stack that this Environment Variable is set for
+    - NAME: standard Docker Image Environment Variable Name (see documentation in Docker Hub for the desired Docker Image)
+    - VALUE: standard Docker Image Environment Variable Value (see documentation in Docker Hub for the desired Docker Image)
 
 [Back to Top](#introduction)
 
