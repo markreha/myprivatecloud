@@ -21,7 +21,7 @@
 					    	<input type="password" class="form-control" id="password" placeholder="Enter Account Username" th:field="*{password}"required />
 				    	</div>
 				    </div>
-			  		<button type="submit" class="btn btn-primary">Login</button>
+			  		<button type="submit" class="btn btn-primary">Log In</button>
 					<div th:if="${#fields.hasErrors('*')}">List of Field Validation Erors</div>
 	   			 	<div th:each="err : ${#fields.errors('*')}">
 	             		<span th:text="${err}" class="fieldError error"></span>
