@@ -447,7 +447,7 @@ public class KubernetesApi
 				// Run Unzip Command in the Pod
 				String file = filename.substring(filename.lastIndexOf(File.separator) + 1);
 				log.info("Upload File is " + file + " and will be uncompressed");
-				String command = "cd " +  completePodPath + " && " + "tar xvzf " + file + " -C ." + " && " + "rm " + file + " && " + "chown root:root * && chmod 777 *";
+				String command = "cd " +  completePodPath + " && " + "tar xvzf " + file + " -C ." + " && " + "rm " + file + " && " + "chown -R root:root * && chmod -R 777 .";
 				execCommand(podName, namespace, command, false);
 			}
 		}
