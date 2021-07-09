@@ -96,7 +96,7 @@ View the [JavaDoc](https://htmlpreview.github.io/?https://github.com/markreha/my
 - [Cat6 Ethernet Cables](https://www.amazon.com/gp/product/B00E5I7T9I/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
 - [Port Gigibit Ethernet Network Switch](https://www.amazon.com/gp/product/B000BCC0LO/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
 - [Ehternet Cables](https://www.amazon.com/gp/product/B00E5I7T9I/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
-- [500GB WD USB 3 SSD Drive](https://www.amazon.com/dp/B07VSPL8FJ?ref=ppx_pop_mob_ap_share)
+- [500GB WD USB 3 SSD Drive](https://www.amazon.com/Passport-Cobalt-Portable-External-Storage/dp/B07MVWJZVS/ref=sr_1_1?dchild=1&keywords=wd+500gb+my+passport&qid=1625792055&s=electronics&sr=1-1)
 - [Power Strip](https://www.amazon.com/dp/B091THXBFJ?ref=ppx_pop_mob_ap_share)
 
 ## Software
