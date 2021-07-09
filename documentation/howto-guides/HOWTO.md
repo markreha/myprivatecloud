@@ -425,7 +425,7 @@ Perform the following on each of the Worker Nodes.
 	# Test
 	whereis samba
 	```
-7. Setup Kubernetes Persistent Volumes by running the following commands:
+7. Setup the directories and permissions on the local storage by running the following commands:
 	```shell
 	# NOTE: there will be 2 PV's defined 
 	#	1) local storage to SD Card with a max of 20Gb
