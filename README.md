@@ -46,7 +46,7 @@ You can find the User Guide [here](https://github.com/markreha/myprivatecloud/bl
     - Desktop based Lens Application (with Prometheus)
     - RealVNC and SSH for accessing the Master Node
 - Low cost:
-    - A single Master Node and three Worker Node Cluster with Storage will cost less than $500
+    - A single Master Node and three Worker Node Cluster with Storage will cost about $500
 - Cloud Compute Resources are easily extendable:
     - You can add a new Worker Node in less then an hour and that will only cost about $75
 - Portal Application is easily extendable:
