@@ -1,0 +1,16 @@
+{
+  "name": "nodeplay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start-nodemon": "nodemon /usr/src/app/server.js --watch /usr/src/app",
+    "start-node": "node /usr/src/app/server.js"
+  },
+  "nodemonConfig": {
+  	"ext": "js,html,json"
+  }
+}
+
