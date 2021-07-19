@@ -36,10 +36,9 @@ You can find the User Guide [here](https://github.com/markreha/myprivatecloud/bl
 - Fully functioning Private Cloud:
     - Capable of running any number of Web Servers, common Web Stacks, Databases, and Tools. Examples include:
         - Web Servers: Nginx and Apache (can be used to host  too)
-        - Web Stacks: PHP (7.1 and 7.4), PHP 7.4 Laravel, Java Tomcat (8.5 and 9.0)
+        - Web Stacks: PHP (7.1 and 7.4), PHP 7.4 Laravel, Java Tomcat (8.5 and 9.0), ASP.NET Core 5.0
         - Databases: MySQL, PostgreSQL, MongoDB
         - Tools: Visual Studio Code, NodeJS Development Server
-        - ASP.NET Core in the works........
     - Deploy Web Sites, Java Spring and Spring Boot applications, PHP and PHP Laravel applications, Express, React, Angular applications
 - Cloud Management:
     - Web based Portal Application
