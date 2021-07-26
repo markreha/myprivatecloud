@@ -65,7 +65,7 @@ Go [back](https://github.com/markreha/myprivatecloud) to the Main Page.
 2. MariaDB and PostgreSQL both do not work on Network Volume Claim. This might be fixed by using a USB 3 drive that is formatted as ext4 or by finding a Docker Image that supports setting MYSQL_AIO to 0.
 3. The subPath does not get deleted for all Deployments. For now the clean up Cronjob Job does its best to try and cleanup everyting. This could be improved by creating an empty "delete" marker file in Deployment and then have the clean up Cronjob Job look for this file to indicate which directories to clean up.
 4. Deployment of Tomcat (with logs of jars) requires a Deployment restart after deployment (via Lens). Also running the application the first time takes a long time before the application starts running. It is not know what is causing this problem. For Spring Boot, we might be able to enable Dev support to get Live Updating.
-5. The ASP.NET Core 5.0 Docker image does not support application deployment.
+5. The ASP.NET Core 5.0 Docker image does not support application deployment and your application must be contained in the Docker image.
 
 [Back to Top](#introduction)
 
