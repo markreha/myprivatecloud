@@ -13,7 +13,7 @@ Can you design and build a fully functioning Private Cloud Platform using a clus
 <br/>
 I set out to answer this question.
 
-This repository contains the design, code, and documentation for the My Private Cloud Reference Design, which is a project that implements a FULLY functioning Private Cloud using a cluster of Raspberry Pi 4's running on Raspbian OS, Docker, and Kubernetes that is all managed by a Portal Application implemented using Spring Boot and Java 15. By the way, there is nothing in this reference design that is specific to a Raspberry Pi 4. The Raspberry Pi 4 could easily be substitued for an Ubuntu Server running in a virtual machine. The research paper I wrote on this project can be found <a href="https://github.com/markreha/myprivatecloud/blob/main/documentation/My%20Private%20Cloud.pdf">here</a>
+This repository contains the design, code, and documentation for the My Private Cloud Reference Design, which is a project that implements a FULLY functioning Private Cloud using a cluster of Raspberry Pi 4's running on Raspbian OS, Docker, and Kubernetes that is all managed by a Portal Application implemented using Spring Boot and Java 15. By the way, there is nothing in this reference design that is specific to a Raspberry Pi 4. The Raspberry Pi 4 could easily be substitued for an Ubuntu Server running in a virtual machine. The research paper I wrote on this project can be found <a href="https://github.com/markreha/myprivatecloud/blob/main/documentation/My%20Private%20Cloud.pdf">here.</a>
 
 Feel free to use this Reference Design to get started building your own Private Cloud!
 <br/>
